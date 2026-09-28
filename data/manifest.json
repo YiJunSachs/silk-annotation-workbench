@@ -4,24 +4,6 @@
   "created": "2026-09-28",
   "files": [
     {
-      "name": "2-124",
-      "width": 461,
-      "height": 681,
-      "boxes": 164,
-      "issues": [
-        {
-          "id": 3,
-          "kind": "明显漏标",
-          "level": "需返工",
-          "description": "左侧多列和底部独立残片有清楚字迹，现有框主要集中在右半部分。 建议补全前暂时移出已完成集。",
-          "indices": []
-        }
-      ],
-      "severity": "需返工",
-      "annotator": "何舒畅",
-      "annotatorSource": "依据提交文件夹：何舒畅"
-    },
-    {
       "name": "1-32",
       "width": 542,
       "height": 880,
