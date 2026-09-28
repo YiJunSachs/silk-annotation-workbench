@@ -3,7 +3,7 @@ const root = new URL('.',location.href);
 export let browserMode = !['127.0.0.1','localhost','[::1]'].includes(location.hostname);
 let readyPromise,dbPromise,manifestPromise;
 const clone = value => structuredClone(value);
-async function staticJson(path){const r=await fetch(new URL(path.replace(/^\//,''),root));if(!r.ok)throw Error('读取失败：'+path);return r.json();}
+async function staticJson(path){const r=await fetch(new URL(path.replace(/^\//,''),root),{cache:'no-cache'});if(!r.ok)throw Error('读取失败：'+path);return r.json();}
 export function ready(){return readyPromise ??= (async()=>{if(!browserMode){try{const r=await fetch('/api/manifest');const m=await r.json();if(!r.ok||!Array.isArray(m.files))browserMode=true;}catch{browserMode=true;}}return browserMode;})();}
 function database(){return dbPromise ??= new Promise((resolve,reject)=>{const r=indexedDB.open('silk-annotations:'+root.pathname,1);r.onupgradeneeded=()=>r.result.createObjectStore('records');r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(Error('浏览器无法保存草稿，请允许此网站使用本地存储'));});}
 async function read(key){const db=await database();return new Promise((resolve,reject)=>{const r=db.transaction('records').objectStore('records').get(key);r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error);});}
@@ -23,7 +23,7 @@ export async function api(path,data){
   if(path.startsWith('/data/'))return staticJson(path);
   if(path==='/api/manifest'){
     const m=clone(await originalManifest());
-    await Promise.all(m.files.map(async f=>{const d=await read('doc:'+f.name);f.revision=d?.revision??0;f.reviewed=d?.reviewed??false;if(d)f.boxes=d.shapes.length;}));
+    await Promise.all(m.files.map(async f=>{const d=await read('doc:'+f.name);f.revision=d?.revision??0;f.reviewed=d?.reviewed??f.reviewed??false;if(d)f.boxes=d.shapes.length;}));
     m.outputPath='当前浏览器草稿；标注文件通过下载保存';return m;
   }
   if(path.startsWith('/api/doc/'))return annotationDocument(decodeURIComponent(path.slice('/api/doc/'.length)));
