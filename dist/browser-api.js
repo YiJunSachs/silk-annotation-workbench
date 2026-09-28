@@ -16,7 +16,7 @@ async function write(key,revision,value){
 }
 function originalManifest(){return manifestPromise ??= staticJson('data/manifest.json');}
 async function original(name){const m=await originalManifest();if(!m.files.some(f=>f.name===name))throw Error('不存在的图片编号');return staticJson('data/'+encodeURIComponent(name)+'.json');}
-async function document(name){const source=await original(name),draft=await read('doc:'+name);return {...source,...draft};}
+async function annotationDocument(name){const source=await original(name),draft=await read('doc:'+name);return {...source,...draft};}
 export async function api(path,data){
   await ready();
   if(!browserMode){const r=await fetch(path,data?{method:'POST',headers:{'Content-Type':'application/json','X-Silk-Editor':'1'},body:JSON.stringify(data)}:{});const result=await r.json();if(!r.ok)throw Error(result.error||'请求失败');return result;}
@@ -26,7 +26,7 @@ export async function api(path,data){
     await Promise.all(m.files.map(async f=>{const d=await read('doc:'+f.name);f.revision=d?.revision??0;f.reviewed=d?.reviewed??false;if(d)f.boxes=d.shapes.length;}));
     m.outputPath='当前浏览器草稿；标注文件通过下载保存';return m;
   }
-  if(path.startsWith('/api/doc/'))return document(decodeURIComponent(path.slice('/api/doc/'.length)));
+  if(path.startsWith('/api/doc/'))return annotationDocument(decodeURIComponent(path.slice('/api/doc/'.length)));
   if(path==='/api/discussion'){
     if(!data)return await read('discussion')||{revision:0,items:{}};
     const m=await staticJson('data/fragments.json'),names=new Set(m.files.map(f=>f.name));
@@ -39,7 +39,7 @@ export async function api(path,data){
     return write('doc:'+data.name,data.revision,{shapes:data.shapes,resolved:data.resolved,reviewed:data.reviewed});
   }
   if(path==='/api/save'){
-    const d=await document(data.name);if(d.revision!==data.revision)throw Error('此图已在其他窗口更新，请刷新后再导出');
+    const d=await annotationDocument(data.name);if(d.revision!==data.revision)throw Error('此图已在其他窗口更新，请刷新后再导出');
     const blob=await exportBlob(data.name,'zip');downloadBlob(blob,'Silk_annotations_'+data.name+'.zip');
     return {name:data.name,boxes:d.shapes.length,path:'浏览器下载目录（ZIP 标注包）',downloaded:true};
   }
@@ -56,7 +56,7 @@ export async function exportBlob(scope,format){
   if(!names.length)throw Error('所选范围没有可导出的图片');
   if(!['zip','json','xml'].includes(format))throw Error('未知导出格式');
   const entries=new Map(),review=[];
-  for(const name of names){const d=await document(name),r=await fetch(new URL(d.image,root));if(!r.ok)throw Error('原图下载失败：'+name);const image=new Uint8Array(await r.arrayBuffer());const files=annotationFiles(d,image,format==='json');
+  for(const name of names){const d=await annotationDocument(name),r=await fetch(new URL(d.image,root));if(!r.ok)throw Error('原图下载失败：'+name);const image=new Uint8Array(await r.arrayBuffer());const files=annotationFiles(d,image,format==='json');
     if(format!=='zip')return new Blob([files.get(`annotations-${format}/${name}.${format}`)],{type:format==='json'?'application/json':'application/xml'});
     for(const [key,value]of files)entries.set(key,value);review.push({name,reviewed:d.reviewed,revision:d.revision,resolved:d.resolved||[]});
   }
