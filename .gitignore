@@ -1,0 +1,9 @@
+.DS_Store
+__pycache__/
+*.pyc
+草稿/
+保存结果/
+测试结果/
+.env
+.env.*
+*.log
