@@ -17,7 +17,9 @@
           "indices": []
         }
       ],
-      "severity": "需返工"
+      "severity": "需返工",
+      "annotator": "何舒畅",
+      "annotatorSource": "依据提交文件夹：何舒畅"
     },
     {
       "name": "1-32",
@@ -37,7 +39,9 @@
         }
       ],
       "severity": "需修正",
-      "reviewed": true
+      "reviewed": true,
+      "annotator": "乔怡凯",
+      "annotatorSource": "依据提交文件夹：帛书标注_乔怡凯"
     },
     {
       "name": "1-50",
@@ -71,7 +75,9 @@
           ]
         }
       ],
-      "severity": "需修正"
+      "severity": "需修正",
+      "annotator": "王文轩",
+      "annotatorSource": "依据源 XML 图片路径中的姓名：王文轩"
     },
     {
       "name": "1-115",
@@ -90,7 +96,9 @@
         }
       ],
       "severity": "需修正",
-      "reviewed": true
+      "reviewed": true,
+      "annotator": "乔怡凯",
+      "annotatorSource": "依据提交文件夹：帛书标注_乔怡凯"
     },
     {
       "name": "1-125",
@@ -109,7 +117,9 @@
         }
       ],
       "severity": "需修正",
-      "reviewed": true
+      "reviewed": true,
+      "annotator": null,
+      "annotatorSource": "来源文件夹：label；源标注未记录明确姓名"
     },
     {
       "name": "1-130",
@@ -164,7 +174,9 @@
         }
       ],
       "severity": "需修正",
-      "reviewed": true
+      "reviewed": true,
+      "annotator": "乔怡凯",
+      "annotatorSource": "依据提交文件夹：帛书标注_乔怡凯"
     },
     {
       "name": "1-148",
@@ -218,7 +230,9 @@
         }
       ],
       "severity": "需修正",
-      "reviewed": true
+      "reviewed": true,
+      "annotator": "乔怡凯",
+      "annotatorSource": "依据提交文件夹：帛书标注_乔怡凯"
     },
     {
       "name": "1-179",
@@ -269,7 +283,9 @@
           ]
         }
       ],
-      "severity": "需修正"
+      "severity": "需修正",
+      "annotator": "乔怡凯",
+      "annotatorSource": "依据提交文件夹：帛书标注_乔怡凯"
     },
     {
       "name": "1-211",
@@ -320,7 +336,9 @@
           ]
         }
       ],
-      "severity": "需修正"
+      "severity": "需修正",
+      "annotator": "王文轩",
+      "annotatorSource": "依据源 XML 图片路径中的姓名：王文轩"
     },
     {
       "name": "1-260",
@@ -337,7 +355,9 @@
         }
       ],
       "severity": "需修正",
-      "reviewed": true
+      "reviewed": true,
+      "annotator": null,
+      "annotatorSource": "来源文件夹：帛书标注；源路径仅含电脑用户名 chenxingliu，姓名待确认"
     },
     {
       "name": "2-24",
@@ -356,7 +376,9 @@
         }
       ],
       "severity": "需修正",
-      "reviewed": true
+      "reviewed": true,
+      "annotator": "乔怡凯",
+      "annotatorSource": "依据提交文件夹：帛书标注_乔怡凯"
     },
     {
       "name": "2-40",
@@ -375,7 +397,9 @@
         }
       ],
       "severity": "需修正",
-      "reviewed": true
+      "reviewed": true,
+      "annotator": "巴瑶涵",
+      "annotatorSource": "依据提交文件夹：巴瑶涵"
     },
     {
       "name": "2-43",
@@ -418,7 +442,9 @@
         }
       ],
       "severity": "需修正",
-      "reviewed": true
+      "reviewed": true,
+      "annotator": "乔怡凯",
+      "annotatorSource": "依据提交文件夹：帛书标注_乔怡凯"
     },
     {
       "name": "1-31",
@@ -438,7 +464,9 @@
         }
       ],
       "severity": "待确认",
-      "reviewed": true
+      "reviewed": true,
+      "annotator": "何舒畅",
+      "annotatorSource": "依据提交文件夹：何舒畅"
     },
     {
       "name": "1-35",
@@ -458,7 +486,9 @@
         }
       ],
       "severity": "待确认",
-      "reviewed": true
+      "reviewed": true,
+      "annotator": "尹钰晨",
+      "annotatorSource": "依据提交文件夹：尹钰晨-帛书"
     },
     {
       "name": "1-57",
@@ -478,7 +508,9 @@
         }
       ],
       "severity": "待确认",
-      "reviewed": true
+      "reviewed": true,
+      "annotator": "何舒畅",
+      "annotatorSource": "依据提交文件夹：何舒畅"
     },
     {
       "name": "1-58",
@@ -502,7 +534,9 @@
         }
       ],
       "severity": "待确认",
-      "reviewed": true
+      "reviewed": true,
+      "annotator": "乔怡凯",
+      "annotatorSource": "依据提交文件夹：帛书标注_乔怡凯"
     },
     {
       "name": "1-65",
@@ -522,7 +556,9 @@
         }
       ],
       "severity": "待确认",
-      "reviewed": true
+      "reviewed": true,
+      "annotator": "王文轩",
+      "annotatorSource": "依据源 XML 图片路径中的姓名：王文轩"
     },
     {
       "name": "1-96",
@@ -551,7 +587,9 @@
         }
       ],
       "severity": "待确认",
-      "reviewed": true
+      "reviewed": true,
+      "annotator": "张择谦",
+      "annotatorSource": "依据源 XML 图片路径中的姓名：张择谦"
     },
     {
       "name": "1-103",
@@ -571,7 +609,9 @@
         }
       ],
       "severity": "待确认",
-      "reviewed": true
+      "reviewed": true,
+      "annotator": null,
+      "annotatorSource": "来源文件夹：帛书标注；源路径仅含电脑用户名 chenxingliu，姓名待确认"
     },
     {
       "name": "1-110",
@@ -591,7 +631,9 @@
         }
       ],
       "severity": "待确认",
-      "reviewed": true
+      "reviewed": true,
+      "annotator": "单朱玉",
+      "annotatorSource": "依据提交文件夹：单朱玉"
     },
     {
       "name": "1-113",
@@ -613,7 +655,9 @@
         }
       ],
       "severity": "待确认",
-      "reviewed": true
+      "reviewed": true,
+      "annotator": "何舒畅",
+      "annotatorSource": "依据提交文件夹：何舒畅"
     },
     {
       "name": "1-171",
@@ -622,7 +666,9 @@
       "boxes": 403,
       "issues": [],
       "severity": "已拆框，待复核",
-      "reviewed": true
+      "reviewed": true,
+      "annotator": "王文轩",
+      "annotatorSource": "依据源 XML 图片路径中的姓名：王文轩"
     },
     {
       "name": "1-175",
@@ -642,7 +688,9 @@
         }
       ],
       "severity": "待确认",
-      "reviewed": true
+      "reviewed": true,
+      "annotator": "单朱玉",
+      "annotatorSource": "依据提交文件夹：单朱玉"
     },
     {
       "name": "1-218",
@@ -662,7 +710,9 @@
         }
       ],
       "severity": "待确认",
-      "reviewed": true
+      "reviewed": true,
+      "annotator": null,
+      "annotatorSource": "来源文件夹：label；源标注未记录明确姓名"
     },
     {
       "name": "2-113",
@@ -681,7 +731,9 @@
         }
       ],
       "severity": "待确认",
-      "reviewed": true
+      "reviewed": true,
+      "annotator": "尹钰晨",
+      "annotatorSource": "依据提交文件夹：尹钰晨-帛书"
     }
   ]
 }
