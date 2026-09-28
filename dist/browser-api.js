@@ -45,7 +45,7 @@ export async function api(path,data){
   }
   throw Error('未知操作');
 }
-export async function exportBlob(scope,format){
+export async function exportBlob(scope,format,onProgress=()=>{}){
   await ready();
   if(!browserMode){const r=await fetch('/api/export?scope='+encodeURIComponent(scope)+'&format='+format);if(!r.ok)throw Error((await r.json()).error);return r.blob();}
   const m=await api('/api/manifest');let names;
@@ -56,10 +56,21 @@ export async function exportBlob(scope,format){
   if(!names.length)throw Error('所选范围没有可导出的图片');
   if(!['zip','json','xml'].includes(format))throw Error('未知导出格式');
   const entries=new Map(),review=[];
-  for(const name of names){const d=await annotationDocument(name),r=await fetch(new URL(d.image,root));if(!r.ok)throw Error('原图下载失败：'+name);const image=new Uint8Array(await r.arrayBuffer());const files=annotationFiles(d,image,format==='json');
+  for(const [index,name] of names.entries()){onProgress(`正在打包 ${index+1}/${names.length}：${name}`);const d=await annotationDocument(name),r=await fetch(new URL(d.image,root),{signal:AbortSignal.timeout(45000)});if(!r.ok)throw Error('原图下载失败：'+name);const image=new Uint8Array(await r.arrayBuffer());const files=annotationFiles(d,image,format==='json');
     if(format!=='zip')return new Blob([files.get(`annotations-${format}/${name}.${format}`)],{type:format==='json'?'application/json':'application/xml'});
     for(const [key,value]of files)entries.set(key,value);review.push({name,reviewed:d.reviewed,revision:d.revision,resolved:d.resolved||[]});
   }
   entries.set('README.txt',exportReadme);entries.set('review-status.json',JSON.stringify(review,null,2));return makeZip(entries);
 }
 export function downloadBlob(blob,filename){const u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(u),60000);}
+
+// Read durable browser drafts directly: no image or annotation network requests.
+export async function exportReviewedDrafts(){
+ const db=await database();
+ const records=await new Promise((resolve,reject)=>{const tx=db.transaction('records'),store=tx.objectStore('records'),items=[],request=store.openCursor();
+ request.onsuccess=()=>{const cursor=request.result;if(!cursor)return;const key=String(cursor.key),value=cursor.value;if(key.startsWith('doc:')&&value.reviewed===true)items.push({name:key.slice(4),...clone(value)});cursor.continue();};
+ tx.oncomplete=()=>resolve(items);tx.onabort=()=>reject(tx.error||Error('读取复核草稿失败'));tx.onerror=()=>reject(tx.error||Error('读取复核草稿失败'));});
+ if(!records.length)throw Error('此浏览器尚无已完成复核的草稿');
+ records.sort((a,b)=>a.name.localeCompare(b.name,undefined,{numeric:true}));
+ return new Blob([JSON.stringify({schema:'silk-reviewed-drafts-v1',exportedAt:new Date().toISOString(),records},null,2)],{type:'application/json'});
+}

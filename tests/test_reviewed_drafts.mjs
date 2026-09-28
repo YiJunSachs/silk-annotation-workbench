@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+globalThis.location=new URL('https://example.test/silk/');
+const source=[['doc:1-32',{reviewed:true,revision:4,shapes:[{id:'a',label:'𠀀',box:[1.2,3,5,7]}]}],['doc:1-50',{reviewed:false,revision:2,shapes:[]}],['discussion',{reviewed:true,items:{}}],['doc:1-171',{reviewed:true,revision:1,shapes:[{id:'b',label:'月',box:[4,5,6,8]}]}]];
+const before=JSON.stringify(source);
+globalThis.fetch=()=>{throw Error('Quick export must not use the network');};
+globalThis.indexedDB={open(){const open={};queueMicrotask(()=>{open.result={transaction(){const tx={objectStore(){return {openCursor(){const req={};let i=0;const step=()=>queueMicrotask(()=>{if(i===source.length){req.result=null;req.onsuccess();queueMicrotask(()=>tx.oncomplete());return;}const [key,value]=source[i++];req.result={key,value,continue:step};req.onsuccess();});step();return req;}};}};return tx;}};open.onsuccess();});return open;}};
+const {exportReviewedDrafts}=await import('../dist/browser-api.js');
+const blob=await exportReviewedDrafts(),d=JSON.parse(await blob.text());
+assert.equal(d.schema,'silk-reviewed-drafts-v1');assert.deepEqual(d.records.map(x=>x.name),['1-32','1-171']);assert.equal(d.records[0].shapes[0].label,'𠀀');assert.equal(d.records[0].shapes[0].box[0],1.2);assert.equal(JSON.stringify(source),before);
+console.log('PASS: only reviewed documents exported; Unicode/order/coordinates preserved; no network or database writes.');
