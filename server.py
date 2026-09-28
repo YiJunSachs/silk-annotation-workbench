@@ -23,7 +23,7 @@ def document(name):
  if p.exists():base.update(json.loads(p.read_text()))
  return base
 def validated(name,data):
- base=original(name);shapes=data.get('shapes');ids=set()
+ base=original(name);shapes=data.get('shapes');ids=set();source_indices={s.get('sourceIndex') for s in base['shapes'] if s.get('sourceIndex') is not None}
  if not isinstance(shapes,list) or len(shapes)>10000:raise ValueError('标注数量不合法')
  for s in shapes:
   if not isinstance(s,dict) or not isinstance(s.get('id'),str) or not s['id'] or len(s['id'])>160 or s['id'] in ids:raise ValueError('标注ID重复或无效')
@@ -34,7 +34,7 @@ def validated(name,data):
   if not isinstance(b,list) or len(b)!=4 or not all(isinstance(x,(int,float)) and not isinstance(x,bool) and math.isfinite(x) for x in b):raise ValueError('坐标必须是4个有限数值')
   if not (0<=b[0]<b[2]<=base['width'] and 0<=b[1]<b[3]<=base['height']):raise ValueError('矩形框超出图片范围或面积为零')
   si=s.get('sourceIndex')
-  if si is not None and (not isinstance(si,int) or isinstance(si,bool) or not 1<=si<=len(base['shapes'])):raise ValueError('原始序号无效')
+  if si is not None and (not isinstance(si,int) or isinstance(si,bool) or si not in source_indices):raise ValueError('原始序号无效')
  if not isinstance(data.get('reviewed',False),bool):raise ValueError('审核状态无效')
  resolved=data.get('resolved',[])
  if not isinstance(resolved,list) or any(not isinstance(x,str) or x not in ids for x in resolved):raise ValueError('已处理标记无效')

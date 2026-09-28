@@ -36,7 +36,8 @@
           ]
         }
       ],
-      "severity": "需修正"
+      "severity": "需修正",
+      "reviewed": true
     },
     {
       "name": "1-50",
@@ -76,7 +77,7 @@
       "name": "1-115",
       "width": 583,
       "height": 866,
-      "boxes": 224,
+      "boxes": 223,
       "issues": [
         {
           "id": 18,
@@ -88,7 +89,8 @@
           ]
         }
       ],
-      "severity": "需修正"
+      "severity": "需修正",
+      "reviewed": true
     },
     {
       "name": "1-125",
@@ -106,13 +108,14 @@
           ]
         }
       ],
-      "severity": "需修正"
+      "severity": "需修正",
+      "reviewed": true
     },
     {
       "name": "1-130",
       "width": 568,
       "height": 869,
-      "boxes": 570,
+      "boxes": 568,
       "issues": [
         {
           "id": 7,
@@ -160,13 +163,14 @@
           ]
         }
       ],
-      "severity": "需修正"
+      "severity": "需修正",
+      "reviewed": true
     },
     {
       "name": "1-148",
       "width": 503,
       "height": 871,
-      "boxes": 532,
+      "boxes": 530,
       "issues": [
         {
           "id": 8,
@@ -213,7 +217,8 @@
           ]
         }
       ],
-      "severity": "需修正"
+      "severity": "需修正",
+      "reviewed": true
     },
     {
       "name": "1-179",
@@ -359,13 +364,14 @@
           "indices": []
         }
       ],
-      "severity": "需修正"
+      "severity": "需修正",
+      "reviewed": true
     },
     {
       "name": "2-24",
       "width": 351,
       "height": 683,
-      "boxes": 450,
+      "boxes": 449,
       "issues": [
         {
           "id": 22,
@@ -377,13 +383,14 @@
           ]
         }
       ],
-      "severity": "需修正"
+      "severity": "需修正",
+      "reviewed": true
     },
     {
       "name": "2-40",
       "width": 377,
       "height": 684,
-      "boxes": 543,
+      "boxes": 542,
       "issues": [
         {
           "id": 23,
@@ -395,13 +402,14 @@
           ]
         }
       ],
-      "severity": "需修正"
+      "severity": "需修正",
+      "reviewed": true
     },
     {
       "name": "2-43",
       "width": 342,
       "height": 685,
-      "boxes": 490,
+      "boxes": 489,
       "issues": [
         {
           "id": 10,
@@ -437,13 +445,14 @@
           ]
         }
       ],
-      "severity": "需修正"
+      "severity": "需修正",
+      "reviewed": true
     },
     {
       "name": "1-31",
       "width": 483,
       "height": 880,
-      "boxes": 406,
+      "boxes": 405,
       "issues": [
         {
           "id": 29,
@@ -456,13 +465,14 @@
           ]
         }
       ],
-      "severity": "待确认"
+      "severity": "待确认",
+      "reviewed": true
     },
     {
       "name": "1-35",
       "width": 528,
       "height": 874,
-      "boxes": 540,
+      "boxes": 539,
       "issues": [
         {
           "id": 30,
@@ -475,13 +485,14 @@
           ]
         }
       ],
-      "severity": "待确认"
+      "severity": "待确认",
+      "reviewed": true
     },
     {
       "name": "1-57",
       "width": 598,
       "height": 704,
-      "boxes": 925,
+      "boxes": 923,
       "issues": [
         {
           "id": 32,
@@ -494,13 +505,14 @@
           ]
         }
       ],
-      "severity": "待确认"
+      "severity": "待确认",
+      "reviewed": true
     },
     {
       "name": "1-58",
       "width": 604,
       "height": 937,
-      "boxes": 756,
+      "boxes": 755,
       "issues": [
         {
           "id": 33,
@@ -517,13 +529,14 @@
           ]
         }
       ],
-      "severity": "待确认"
+      "severity": "待确认",
+      "reviewed": true
     },
     {
       "name": "1-65",
       "width": 516,
       "height": 856,
-      "boxes": 706,
+      "boxes": 705,
       "issues": [
         {
           "id": 34,
@@ -536,7 +549,8 @@
           ]
         }
       ],
-      "severity": "待确认"
+      "severity": "待确认",
+      "reviewed": true
     },
     {
       "name": "1-96",
@@ -564,13 +578,14 @@
           ]
         }
       ],
-      "severity": "待确认"
+      "severity": "待确认",
+      "reviewed": true
     },
     {
       "name": "1-103",
       "width": 574,
       "height": 872,
-      "boxes": 909,
+      "boxes": 908,
       "issues": [
         {
           "id": 36,
@@ -583,13 +598,14 @@
           ]
         }
       ],
-      "severity": "待确认"
+      "severity": "待确认",
+      "reviewed": true
     },
     {
       "name": "1-110",
       "width": 548,
       "height": 872,
-      "boxes": 728,
+      "boxes": 727,
       "issues": [
         {
           "id": 37,
@@ -602,7 +618,8 @@
           ]
         }
       ],
-      "severity": "待确认"
+      "severity": "待确认",
+      "reviewed": true
     },
     {
       "name": "1-113",
@@ -623,7 +640,8 @@
           ]
         }
       ],
-      "severity": "待确认"
+      "severity": "待确认",
+      "reviewed": true
     },
     {
       "name": "1-171",
@@ -631,7 +649,8 @@
       "height": 865,
       "boxes": 403,
       "issues": [],
-      "severity": "已拆框，待复核"
+      "severity": "已拆框，待复核",
+      "reviewed": true
     },
     {
       "name": "1-175",
@@ -650,13 +669,14 @@
           ]
         }
       ],
-      "severity": "待确认"
+      "severity": "待确认",
+      "reviewed": true
     },
     {
       "name": "1-218",
       "width": 570,
       "height": 616,
-      "boxes": 621,
+      "boxes": 620,
       "issues": [
         {
           "id": 44,
@@ -669,7 +689,8 @@
           ]
         }
       ],
-      "severity": "待确认"
+      "severity": "待确认",
+      "reviewed": true
     },
     {
       "name": "2-113",
@@ -687,7 +708,8 @@
           ]
         }
       ],
-      "severity": "待确认"
+      "severity": "待确认",
+      "reviewed": true
     }
   ]
 }
