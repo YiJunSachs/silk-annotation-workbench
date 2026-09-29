@@ -4,7 +4,7 @@
   "height": 704,
   "image": "images/1-57.png",
   "sourceFormat": ".xml",
-  "sourceSha256": "1e19437ea95f37d6b8e7c34605505001ba016a68f8b4f2be68ce5174b63313f4",
+  "sourceSha256": "fd320b86024dff2a78d9eba4dd5e60881b7cbb831759225a20b804f55624e125",
   "shapes": [
     {
       "id": "1-57:1",
@@ -8169,17 +8169,6 @@
       ]
     },
     {
-      "id": "1-57:745",
-      "sourceIndex": 745,
-      "label": "也",
-      "box": [
-        154,
-        157,
-        170,
-        174
-      ]
-    },
-    {
       "id": "1-57:746",
       "sourceIndex": 746,
       "label": "困",
@@ -8188,6 +8177,17 @@
         140,
         171,
         156
+      ]
+    },
+    {
+      "id": "1-57:745",
+      "sourceIndex": 745,
+      "label": "也",
+      "box": [
+        154,
+        157,
+        170,
+        174
       ]
     },
     {
@@ -9698,17 +9698,6 @@
       ]
     },
     {
-      "id": "1-57:884",
-      "sourceIndex": 884,
-      "label": "疑",
-      "box": [
-        92,
-        501,
-        108,
-        518
-      ]
-    },
-    {
       "id": "1-57:885",
       "sourceIndex": 885,
       "label": "與",
@@ -9717,6 +9706,17 @@
         388,
         106,
         408
+      ]
+    },
+    {
+      "id": "1-57:884",
+      "sourceIndex": 884,
+      "label": "疑",
+      "box": [
+        92,
+        501,
+        108,
+        518
       ]
     },
     {
@@ -10172,7 +10172,7 @@
       ]
     }
   ],
-  "reviewed": true,
+  "reviewed": false,
   "revision": 0,
   "resolved": [],
   "importedReview": {
@@ -10180,5 +10180,11 @@
     "draftRevision": 5,
     "importedAt": "2026-09-28T20:37:10+08:00",
     "inputSha256": "1f2332c7428cb1c335dccb1f011789d93185107fca6677fc6c77ac172a30dee8"
+  },
+  "reviewedBeforeOrderAdjustment": true,
+  "annotationImportedAt": "2026-09-29-order-batch",
+  "orderAdjustment": {
+    "moved": 4,
+    "comparison": "order.html?image=1-57"
   }
 }

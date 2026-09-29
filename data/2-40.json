@@ -4,7 +4,7 @@
   "height": 684,
   "image": "images/2-40.png",
   "sourceFormat": ".json",
-  "sourceSha256": "eef077bd832f24abda08a5eda831ae3e953350ff4932a8b8fa42bbfa93fa35fa",
+  "sourceSha256": "d885c947b550f76daf2ed870e7cbaeaf48b42646920da0c252ffd2ffd52a3822",
   "shapes": [
     {
       "id": "2-40:1",
@@ -4330,6 +4330,17 @@
       ]
     },
     {
+      "id": "2-40:397",
+      "sourceIndex": 397,
+      "label": "南",
+      "box": [
+        99.08020477815701,
+        38.50170648464165,
+        111.70819112627989,
+        53.51877133105804
+      ]
+    },
+    {
       "id": "2-40:395",
       "sourceIndex": 395,
       "label": "山",
@@ -4349,17 +4360,6 @@
         71.77815699658706,
         110.68430034129695,
         85.43003412969284
-      ]
-    },
-    {
-      "id": "2-40:397",
-      "sourceIndex": 397,
-      "label": "南",
-      "box": [
-        99.08020477815701,
-        38.50170648464165,
-        111.70819112627989,
-        53.51877133105804
       ]
     },
     {
@@ -5980,7 +5980,7 @@
       ]
     }
   ],
-  "reviewed": true,
+  "reviewed": false,
   "revision": 0,
   "resolved": [],
   "importedReview": {
@@ -5988,5 +5988,11 @@
     "draftRevision": 2,
     "importedAt": "2026-09-28T20:37:10+08:00",
     "inputSha256": "1f2332c7428cb1c335dccb1f011789d93185107fca6677fc6c77ac172a30dee8"
+  },
+  "reviewedBeforeOrderAdjustment": true,
+  "annotationImportedAt": "2026-09-29-order-batch",
+  "orderAdjustment": {
+    "moved": 3,
+    "comparison": "order.html?image=2-40"
   }
 }

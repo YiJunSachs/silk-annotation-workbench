@@ -4,7 +4,7 @@
   "height": 872,
   "image": "images/1-110.png",
   "sourceFormat": ".xml",
-  "sourceSha256": "62afb6086b910e9772d3cfe0a0e51898baae9de80b6138827f583c4774667c0f",
+  "sourceSha256": "88fe9f9a86f711dcdb8af9c52629d3aff4b1ae4b482faa81cae6bb36a245d730",
   "shapes": [
     {
       "id": "1-110:1",
@@ -2438,83 +2438,6 @@
       ]
     },
     {
-      "id": "1-110:223",
-      "sourceIndex": 223,
-      "label": "秦",
-      "box": [
-        379,
-        632,
-        399,
-        654
-      ]
-    },
-    {
-      "id": "1-110:224",
-      "sourceIndex": 224,
-      "label": "王",
-      "box": [
-        379,
-        660,
-        399,
-        682
-      ]
-    },
-    {
-      "id": "1-110:225",
-      "sourceIndex": 225,
-      "label": "曰",
-      "box": [
-        379,
-        681,
-        399,
-        703
-      ]
-    },
-    {
-      "id": "1-110:226",
-      "sourceIndex": 226,
-      "label": "羛",
-      "box": [
-        379,
-        703,
-        399,
-        725
-      ]
-    },
-    {
-      "id": "1-110:227",
-      "sourceIndex": 227,
-      "label": "以",
-      "box": [
-        379,
-        725,
-        399,
-        747
-      ]
-    },
-    {
-      "id": "1-110:228",
-      "sourceIndex": 228,
-      "label": "爲",
-      "box": [
-        381,
-        741,
-        401,
-        763
-      ]
-    },
-    {
-      "id": "1-110:229",
-      "sourceIndex": 229,
-      "label": "魏",
-      "box": [
-        380,
-        763,
-        400,
-        785
-      ]
-    },
-    {
       "id": "1-110:230",
       "sourceIndex": 230,
       "label": "曰",
@@ -2765,6 +2688,83 @@
         585,
         394,
         607
+      ]
+    },
+    {
+      "id": "1-110:223",
+      "sourceIndex": 223,
+      "label": "秦",
+      "box": [
+        379,
+        632,
+        399,
+        654
+      ]
+    },
+    {
+      "id": "1-110:224",
+      "sourceIndex": 224,
+      "label": "王",
+      "box": [
+        379,
+        660,
+        399,
+        682
+      ]
+    },
+    {
+      "id": "1-110:225",
+      "sourceIndex": 225,
+      "label": "曰",
+      "box": [
+        379,
+        681,
+        399,
+        703
+      ]
+    },
+    {
+      "id": "1-110:226",
+      "sourceIndex": 226,
+      "label": "羛",
+      "box": [
+        379,
+        703,
+        399,
+        725
+      ]
+    },
+    {
+      "id": "1-110:227",
+      "sourceIndex": 227,
+      "label": "以",
+      "box": [
+        379,
+        725,
+        399,
+        747
+      ]
+    },
+    {
+      "id": "1-110:228",
+      "sourceIndex": 228,
+      "label": "爲",
+      "box": [
+        381,
+        741,
+        401,
+        763
+      ]
+    },
+    {
+      "id": "1-110:229",
+      "sourceIndex": 229,
+      "label": "魏",
+      "box": [
+        380,
+        763,
+        400,
+        785
       ]
     },
     {
@@ -8016,7 +8016,7 @@
       ]
     }
   ],
-  "reviewed": true,
+  "reviewed": false,
   "revision": 0,
   "resolved": [],
   "importedReview": {
@@ -8024,5 +8024,11 @@
     "draftRevision": 3,
     "importedAt": "2026-09-28T20:37:10+08:00",
     "inputSha256": "1f2332c7428cb1c335dccb1f011789d93185107fca6677fc6c77ac172a30dee8"
+  },
+  "reviewedBeforeOrderAdjustment": true,
+  "annotationImportedAt": "2026-09-29-order-batch",
+  "orderAdjustment": {
+    "moved": 30,
+    "comparison": "order.html?image=1-110"
   }
 }

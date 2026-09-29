@@ -4,7 +4,7 @@
   "height": 856,
   "image": "images/1-65.png",
   "sourceFormat": ".xml",
-  "sourceSha256": "7cea10d6ff4492212561f419445241b99bdc5d10cfad3ddb9985c8a26639bb6b",
+  "sourceSha256": "6348ff70b5c5aaaca3da3e721c2addd9808658c1314a5d514cf7853f8459655b",
   "shapes": [
     {
       "id": "1-65:1",
@@ -271,17 +271,6 @@
       ]
     },
     {
-      "id": "1-65:25",
-      "sourceIndex": 25,
-      "label": "事",
-      "box": [
-        434,
-        266,
-        448,
-        286
-      ]
-    },
-    {
       "id": "1-65:26",
       "sourceIndex": 26,
       "label": "无",
@@ -290,6 +279,17 @@
         247,
         450,
         264
+      ]
+    },
+    {
+      "id": "1-65:25",
+      "sourceIndex": 25,
+      "label": "事",
+      "box": [
+        434,
+        266,
+        448,
+        286
       ]
     },
     {
@@ -7774,7 +7774,7 @@
       ]
     }
   ],
-  "reviewed": true,
+  "reviewed": false,
   "revision": 0,
   "resolved": [],
   "importedReview": {
@@ -7782,5 +7782,11 @@
     "draftRevision": 3,
     "importedAt": "2026-09-28T20:37:10+08:00",
     "inputSha256": "1f2332c7428cb1c335dccb1f011789d93185107fca6677fc6c77ac172a30dee8"
+  },
+  "reviewedBeforeOrderAdjustment": true,
+  "annotationImportedAt": "2026-09-29-order-batch",
+  "orderAdjustment": {
+    "moved": 2,
+    "comparison": "order.html?image=1-65"
   }
 }
