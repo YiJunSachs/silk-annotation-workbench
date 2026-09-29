@@ -50,7 +50,9 @@
       "annotator": "王文轩",
       "annotatorSource": "依据源 XML 图片路径中的姓名：王文轩",
       "reviewed": false,
-      "revision": 0
+      "revision": 0,
+      "sourceSha256": "7008ee602650e236eb7c0abedd07d8fcb74e4283f58a90e59b43200f228b1a5c",
+      "annotationImportedAt": "2026-09-29T14:51:18+08:00"
     },
     {
       "name": "1-115",
@@ -239,7 +241,9 @@
       "annotator": "乔怡凯",
       "annotatorSource": "依据提交文件夹：帛书标注_乔怡凯",
       "reviewed": false,
-      "revision": 0
+      "revision": 0,
+      "sourceSha256": "e045e33f1e006d0b83828835dcadaa32d41223ccc79402dcff6d7a6ea94936d5",
+      "annotationImportedAt": "2026-09-29T14:51:18+08:00"
     },
     {
       "name": "1-211",
@@ -251,7 +255,9 @@
       "annotator": "王文轩",
       "annotatorSource": "依据源 XML 图片路径中的姓名：王文轩",
       "reviewed": false,
-      "revision": 0
+      "revision": 0,
+      "sourceSha256": "3cdbaf27de823e4d34f5faa1a5f2ad46ae8bda639b9c00db77f6840a30b51e9a",
+      "annotationImportedAt": "2026-09-29T14:51:18+08:00"
     },
     {
       "name": "1-260",
