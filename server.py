@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Local-only Silk annotation editor; source corpus is never written."""
+"""Local-only Silk annotation editor; explicit order review can update the source corpus."""
 from http.server import ThreadingHTTPServer,SimpleHTTPRequestHandler
 from pathlib import Path
 from urllib.parse import urlsplit,unquote,parse_qs
 import argparse,json,threading,math,io,zipfile,base64,shutil,os,uuid,xml.etree.ElementTree as ET,datetime
+import order_review
 BASE=Path(__file__).resolve().parent;DIST=BASE/'dist';DRAFTS=BASE/'草稿';OUTPUT=BASE/'保存结果';LOCK=threading.RLock()
 MANIFEST=json.loads((DIST/'data/manifest.json').read_text());NAMES={r['name'] for r in MANIFEST['files']}
 def now():return datetime.datetime.now().astimezone().isoformat(timespec='seconds')
@@ -68,6 +69,8 @@ class Handler(SimpleHTTPRequestHandler):
   if not self.host_ok():return self.reply({'error':'无效访问地址'},403)
   u=urlsplit(self.path);path=unquote(u.path)
   try:
+   if path=='/api/order-review':
+    with LOCK:return self.reply(order_review.state(BASE))
    if path=='/api/discussion':
     p=DRAFTS/'_discussion.json'
     with LOCK:d=json.loads(p.read_text()) if p.exists() else {'revision':0,'items':{}}
@@ -118,6 +121,8 @@ class Handler(SimpleHTTPRequestHandler):
      for v in items.values():
       if not isinstance(v,dict) or v.get('decision') not in ['待讨论','建议保留','建议剔除','补标后保留'] or not isinstance(v.get('note'),str) or len(v['note'])>4000:raise ValueError('Invalid discussion decision or note')
      result={'revision':old['revision']+1,'items':items,'updatedAt':now()};atomic(p,encoded(result));return self.reply(result)
+   if path=='/api/order-review':
+    with LOCK:return self.reply(order_review.apply(BASE,data))
    name=data.get('name');original(name)
    with LOCK:
     d=document(name)
