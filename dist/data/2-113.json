@@ -4,7 +4,7 @@
   "height": 679,
   "image": "images/2-113.png",
   "sourceFormat": ".json",
-  "sourceSha256": "a02f6c8eb30151da053337704ca6dce60d34659a6df3eb539be12ae5f25d155c",
+  "sourceSha256": "4916e38f5973ba9e52973f6b6d426ae75a4745e823cba5a4641e3ef588fdf918",
   "shapes": [
     {
       "id": "2-113:1",
@@ -854,17 +854,6 @@
       ]
     },
     {
-      "id": "2-113:78",
-      "sourceIndex": 78,
-      "label": "此",
-      "box": [
-        269.94591029023746,
-        212.45514511873347,
-        293.16490765171505,
-        231.18865435356196
-      ]
-    },
-    {
       "id": "2-113:79",
       "sourceIndex": 79,
       "label": "之",
@@ -873,6 +862,17 @@
         192.40237467018466,
         290.79023746701847,
         212.1912928759894
+      ]
+    },
+    {
+      "id": "2-113:78",
+      "sourceIndex": 78,
+      "label": "此",
+      "box": [
+        269.94591029023746,
+        212.45514511873347,
+        293.16490765171505,
+        231.18865435356196
       ]
     },
     {
@@ -2284,7 +2284,7 @@
       ]
     }
   ],
-  "reviewed": true,
+  "reviewed": false,
   "revision": 0,
   "resolved": [],
   "importedReview": {
@@ -2292,5 +2292,11 @@
     "draftRevision": 2,
     "importedAt": "2026-09-28T20:37:10+08:00",
     "inputSha256": "1f2332c7428cb1c335dccb1f011789d93185107fca6677fc6c77ac172a30dee8"
+  },
+  "reviewedBeforeOrderAdjustment": true,
+  "annotationImportedAt": "2026-09-29-order-batch",
+  "orderAdjustment": {
+    "moved": 2,
+    "comparison": "order.html?image=2-113"
   }
 }

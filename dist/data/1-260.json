@@ -4,7 +4,7 @@
   "height": 826,
   "image": "images/1-260.png",
   "sourceFormat": ".xml",
-  "sourceSha256": "d362963b898f1f32380b150bda69b288c204fc1cc06324379c5889d84735553e",
+  "sourceSha256": "4c9623bbfd5ac853e2c928a267b8c503feff37d16a32444b19219bb1e2dfed22",
   "shapes": [
     {
       "id": "1-260:1",
@@ -337,28 +337,6 @@
       ]
     },
     {
-      "id": "1-260:31",
-      "sourceIndex": 31,
-      "label": "星",
-      "box": [
-        147,
-        333,
-        170,
-        356
-      ]
-    },
-    {
-      "id": "1-260:32",
-      "sourceIndex": 32,
-      "label": "申",
-      "box": [
-        151,
-        315,
-        170,
-        332
-      ]
-    },
-    {
       "id": "1-260:33",
       "sourceIndex": 33,
       "label": "月",
@@ -389,6 +367,28 @@
         284,
         170,
         303
+      ]
+    },
+    {
+      "id": "1-260:32",
+      "sourceIndex": 32,
+      "label": "申",
+      "box": [
+        151,
+        315,
+        170,
+        332
+      ]
+    },
+    {
+      "id": "1-260:31",
+      "sourceIndex": 31,
+      "label": "星",
+      "box": [
+        147,
+        333,
+        170,
+        356
       ]
     },
     {
@@ -896,7 +896,7 @@
       "indices": []
     }
   ],
-  "reviewed": true,
+  "reviewed": false,
   "revision": 0,
   "resolved": [],
   "importedReview": {
@@ -904,5 +904,11 @@
     "draftRevision": 1,
     "importedAt": "2026-09-28T20:37:10+08:00",
     "inputSha256": "1f2332c7428cb1c335dccb1f011789d93185107fca6677fc6c77ac172a30dee8"
+  },
+  "reviewedBeforeOrderAdjustment": true,
+  "annotationImportedAt": "2026-09-29-order-batch",
+  "orderAdjustment": {
+    "moved": 5,
+    "comparison": "order.html?image=1-260"
   }
 }

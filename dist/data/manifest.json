@@ -21,9 +21,11 @@
         }
       ],
       "severity": "需修正",
-      "reviewed": true,
+      "reviewed": false,
       "annotator": "乔怡凯",
-      "annotatorSource": "依据提交文件夹：帛书标注_乔怡凯"
+      "annotatorSource": "依据提交文件夹：帛书标注_乔怡凯",
+      "sourceSha256": "8b1965fb8577a74059949a79596ec3a062e967060a3f90e9950fa8d5ae20689a",
+      "annotationImportedAt": "2026-09-29-order-batch"
     },
     {
       "name": "1-50",
@@ -49,8 +51,8 @@
       "annotatorSource": "依据源 XML 图片路径中的姓名：王文轩",
       "reviewed": false,
       "revision": 0,
-      "sourceSha256": "7bfe88262c0952d7377c0fd0d948851bc1f146086cdaeeab30ffa847d87e6d6a",
-      "annotationImportedAt": "2026-09-29T15:21:10+08:00"
+      "sourceSha256": "7cd3b90ef89ba5ad4f368d243363e0ec7ffce4db09236852b334df2d67e0a07a",
+      "annotationImportedAt": "2026-09-29-order-batch"
     },
     {
       "name": "1-115",
@@ -69,9 +71,11 @@
         }
       ],
       "severity": "需修正",
-      "reviewed": true,
+      "reviewed": false,
       "annotator": "乔怡凯",
-      "annotatorSource": "依据提交文件夹：帛书标注_乔怡凯"
+      "annotatorSource": "依据提交文件夹：帛书标注_乔怡凯",
+      "sourceSha256": "47c0f264943c19611b516d34fc42209569b7df4c91ec3445cc0b6c853de3104d",
+      "annotationImportedAt": "2026-09-29-order-batch"
     },
     {
       "name": "1-125",
@@ -90,9 +94,11 @@
         }
       ],
       "severity": "需修正",
-      "reviewed": true,
+      "reviewed": false,
       "annotator": null,
-      "annotatorSource": "来源文件夹：label；源标注未记录明确姓名"
+      "annotatorSource": "来源文件夹：label；源标注未记录明确姓名",
+      "sourceSha256": "e85a4558087f77d469075b17005de5ae76b9625fb388e14795070f4d8a4c2a27",
+      "annotationImportedAt": "2026-09-29-order-batch"
     },
     {
       "name": "1-130",
@@ -147,9 +153,11 @@
         }
       ],
       "severity": "需修正",
-      "reviewed": true,
+      "reviewed": false,
       "annotator": "乔怡凯",
-      "annotatorSource": "依据提交文件夹：帛书标注_乔怡凯"
+      "annotatorSource": "依据提交文件夹：帛书标注_乔怡凯",
+      "sourceSha256": "974fdba84c059df05f08cc17b69ae186943e94af4cd2c6c0ea62a633f9936c3e",
+      "annotationImportedAt": "2026-09-29-order-batch"
     },
     {
       "name": "1-148",
@@ -203,9 +211,11 @@
         }
       ],
       "severity": "需修正",
-      "reviewed": true,
+      "reviewed": false,
       "annotator": "乔怡凯",
-      "annotatorSource": "依据提交文件夹：帛书标注_乔怡凯"
+      "annotatorSource": "依据提交文件夹：帛书标注_乔怡凯",
+      "sourceSha256": "5d008b72f265e864af7d2a9e0d15fadd97471c0f396fbdba02e866ef23dd580e",
+      "annotationImportedAt": "2026-09-29-order-batch"
     },
     {
       "name": "1-260",
@@ -222,9 +232,11 @@
         }
       ],
       "severity": "需修正",
-      "reviewed": true,
+      "reviewed": false,
       "annotator": null,
-      "annotatorSource": "来源文件夹：帛书标注；源路径仅含电脑用户名 chenxingliu，姓名待确认"
+      "annotatorSource": "来源文件夹：帛书标注；源路径仅含电脑用户名 chenxingliu，姓名待确认",
+      "sourceSha256": "4c9623bbfd5ac853e2c928a267b8c503feff37d16a32444b19219bb1e2dfed22",
+      "annotationImportedAt": "2026-09-29-order-batch"
     },
     {
       "name": "2-24",
@@ -243,9 +255,11 @@
         }
       ],
       "severity": "需修正",
-      "reviewed": true,
+      "reviewed": false,
       "annotator": "乔怡凯",
-      "annotatorSource": "依据提交文件夹：帛书标注_乔怡凯"
+      "annotatorSource": "依据提交文件夹：帛书标注_乔怡凯",
+      "sourceSha256": "9c736df95f3288474fe4fbe4d9c9250e2eceb81a01fb218b182e219cd1562646",
+      "annotationImportedAt": "2026-09-29-order-batch"
     },
     {
       "name": "2-40",
@@ -264,9 +278,11 @@
         }
       ],
       "severity": "需修正",
-      "reviewed": true,
+      "reviewed": false,
       "annotator": "巴瑶涵",
-      "annotatorSource": "依据提交文件夹：巴瑶涵"
+      "annotatorSource": "依据提交文件夹：巴瑶涵",
+      "sourceSha256": "d885c947b550f76daf2ed870e7cbaeaf48b42646920da0c252ffd2ffd52a3822",
+      "annotationImportedAt": "2026-09-29-order-batch"
     },
     {
       "name": "2-43",
@@ -309,9 +325,11 @@
         }
       ],
       "severity": "需修正",
-      "reviewed": true,
+      "reviewed": false,
       "annotator": "乔怡凯",
-      "annotatorSource": "依据提交文件夹：帛书标注_乔怡凯"
+      "annotatorSource": "依据提交文件夹：帛书标注_乔怡凯",
+      "sourceSha256": "e66afd0d1e3ababd46bdd64e2517ce531ec50685e62f0b6d9ee0fb3e8535c364",
+      "annotationImportedAt": "2026-09-29-order-batch"
     },
     {
       "name": "1-31",
@@ -375,9 +393,11 @@
         }
       ],
       "severity": "待确认",
-      "reviewed": true,
+      "reviewed": false,
       "annotator": "何舒畅",
-      "annotatorSource": "依据提交文件夹：何舒畅"
+      "annotatorSource": "依据提交文件夹：何舒畅",
+      "sourceSha256": "fd320b86024dff2a78d9eba4dd5e60881b7cbb831759225a20b804f55624e125",
+      "annotationImportedAt": "2026-09-29-order-batch"
     },
     {
       "name": "1-58",
@@ -401,9 +421,11 @@
         }
       ],
       "severity": "待确认",
-      "reviewed": true,
+      "reviewed": false,
       "annotator": "乔怡凯",
-      "annotatorSource": "依据提交文件夹：帛书标注_乔怡凯"
+      "annotatorSource": "依据提交文件夹：帛书标注_乔怡凯",
+      "sourceSha256": "54b924d0fa8120e1f7775c12dc7c0db012803323a4ea012abb822a164924bbae",
+      "annotationImportedAt": "2026-09-29-order-batch"
     },
     {
       "name": "1-65",
@@ -423,9 +445,11 @@
         }
       ],
       "severity": "待确认",
-      "reviewed": true,
+      "reviewed": false,
       "annotator": "王文轩",
-      "annotatorSource": "依据源 XML 图片路径中的姓名：王文轩"
+      "annotatorSource": "依据源 XML 图片路径中的姓名：王文轩",
+      "sourceSha256": "6348ff70b5c5aaaca3da3e721c2addd9808658c1314a5d514cf7853f8459655b",
+      "annotationImportedAt": "2026-09-29-order-batch"
     },
     {
       "name": "1-96",
@@ -454,9 +478,11 @@
         }
       ],
       "severity": "待确认",
-      "reviewed": true,
+      "reviewed": false,
       "annotator": "张择谦",
-      "annotatorSource": "依据源 XML 图片路径中的姓名：张择谦"
+      "annotatorSource": "依据源 XML 图片路径中的姓名：张择谦",
+      "sourceSha256": "e0cab7df557ff86f7d4de05846d2ec3a9b96eac728ecf2d13bc51d3ad5d702d0",
+      "annotationImportedAt": "2026-09-29-order-batch"
     },
     {
       "name": "1-103",
@@ -498,9 +524,11 @@
         }
       ],
       "severity": "待确认",
-      "reviewed": true,
+      "reviewed": false,
       "annotator": "单朱玉",
-      "annotatorSource": "依据提交文件夹：单朱玉"
+      "annotatorSource": "依据提交文件夹：单朱玉",
+      "sourceSha256": "88fe9f9a86f711dcdb8af9c52629d3aff4b1ae4b482faa81cae6bb36a245d730",
+      "annotationImportedAt": "2026-09-29-order-batch"
     },
     {
       "name": "1-113",
@@ -522,9 +550,11 @@
         }
       ],
       "severity": "待确认",
-      "reviewed": true,
+      "reviewed": false,
       "annotator": "何舒畅",
-      "annotatorSource": "依据提交文件夹：何舒畅"
+      "annotatorSource": "依据提交文件夹：何舒畅",
+      "sourceSha256": "1c48633d212df1c97037489af880acfe1c1d102448f9e020d586185402df8260",
+      "annotationImportedAt": "2026-09-29-order-batch"
     },
     {
       "name": "1-171",
@@ -555,9 +585,11 @@
         }
       ],
       "severity": "待确认",
-      "reviewed": true,
+      "reviewed": false,
       "annotator": "单朱玉",
-      "annotatorSource": "依据提交文件夹：单朱玉"
+      "annotatorSource": "依据提交文件夹：单朱玉",
+      "sourceSha256": "e32ae9ad3746f7da44b26498aa6100b417be0bb7b4b5c172a21c75657e7e2ccc",
+      "annotationImportedAt": "2026-09-29-order-batch"
     },
     {
       "name": "1-218",
@@ -577,9 +609,11 @@
         }
       ],
       "severity": "待确认",
-      "reviewed": true,
+      "reviewed": false,
       "annotator": null,
-      "annotatorSource": "来源文件夹：label；源标注未记录明确姓名"
+      "annotatorSource": "来源文件夹：label；源标注未记录明确姓名",
+      "sourceSha256": "af577acce023671e23faa7073f5e9aa8848746589b366fb36afae14e9060d7f0",
+      "annotationImportedAt": "2026-09-29-order-batch"
     },
     {
       "name": "2-113",
@@ -598,9 +632,11 @@
         }
       ],
       "severity": "待确认",
-      "reviewed": true,
+      "reviewed": false,
       "annotator": "尹钰晨",
-      "annotatorSource": "依据提交文件夹：尹钰晨-帛书"
+      "annotatorSource": "依据提交文件夹：尹钰晨-帛书",
+      "sourceSha256": "4916e38f5973ba9e52973f6b6d426ae75a4745e823cba5a4641e3ef588fdf918",
+      "annotationImportedAt": "2026-09-29-order-batch"
     }
   ]
 }

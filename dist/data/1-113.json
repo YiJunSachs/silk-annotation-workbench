@@ -4,7 +4,7 @@
   "height": 873,
   "image": "images/1-113.png",
   "sourceFormat": ".xml",
-  "sourceSha256": "3d183ad80d167b081693ff6a45938561c99e5a8c3982e50b0da6c8192192eba7",
+  "sourceSha256": "1c48633d212df1c97037489af880acfe1c1d102448f9e020d586185402df8260",
   "shapes": [
     {
       "id": "1-113:1",
@@ -1613,17 +1613,6 @@
       ]
     },
     {
-      "id": "1-113:147",
-      "sourceIndex": 147,
-      "label": "粱",
-      "box": [
-        415,
-        311,
-        441,
-        348
-      ]
-    },
-    {
       "id": "1-113:148",
       "sourceIndex": 148,
       "label": "是",
@@ -1632,6 +1621,17 @@
         283,
         440,
         308
+      ]
+    },
+    {
+      "id": "1-113:147",
+      "sourceIndex": 147,
+      "label": "粱",
+      "box": [
+        415,
+        311,
+        441,
+        348
       ]
     },
     {
@@ -5928,7 +5928,7 @@
       ]
     }
   ],
-  "reviewed": true,
+  "reviewed": false,
   "revision": 0,
   "resolved": [],
   "importedReview": {
@@ -5936,5 +5936,11 @@
     "draftRevision": 1,
     "importedAt": "2026-09-28T20:37:10+08:00",
     "inputSha256": "1f2332c7428cb1c335dccb1f011789d93185107fca6677fc6c77ac172a30dee8"
+  },
+  "reviewedBeforeOrderAdjustment": true,
+  "annotationImportedAt": "2026-09-29-order-batch",
+  "orderAdjustment": {
+    "moved": 2,
+    "comparison": "order.html?image=1-113"
   }
 }

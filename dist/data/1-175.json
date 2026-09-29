@@ -4,7 +4,7 @@
   "height": 844,
   "image": "images/1-175.png",
   "sourceFormat": ".xml",
-  "sourceSha256": "af44ce4fe7616140e8b508a9c481c406c64f82393ae825063d0e65f6aa3a464d",
+  "sourceSha256": "e32ae9ad3746f7da44b26498aa6100b417be0bb7b4b5c172a21c75657e7e2ccc",
   "shapes": [
     {
       "id": "1-175:1",
@@ -381,17 +381,6 @@
       ]
     },
     {
-      "id": "1-175:35",
-      "sourceIndex": 35,
-      "label": "正",
-      "box": [
-        435,
-        112,
-        461,
-        139
-      ]
-    },
-    {
       "id": "1-175:36",
       "sourceIndex": 36,
       "label": "月",
@@ -400,6 +389,17 @@
         111,
         460,
         138
+      ]
+    },
+    {
+      "id": "1-175:35",
+      "sourceIndex": 35,
+      "label": "正",
+      "box": [
+        435,
+        112,
+        461,
+        139
       ]
     },
     {
@@ -6388,7 +6388,7 @@
       ]
     }
   ],
-  "reviewed": true,
+  "reviewed": false,
   "revision": 0,
   "resolved": [],
   "importedReview": {
@@ -6396,5 +6396,11 @@
     "draftRevision": 1,
     "importedAt": "2026-09-28T20:37:10+08:00",
     "inputSha256": "1f2332c7428cb1c335dccb1f011789d93185107fca6677fc6c77ac172a30dee8"
+  },
+  "reviewedBeforeOrderAdjustment": true,
+  "annotationImportedAt": "2026-09-29-order-batch",
+  "orderAdjustment": {
+    "moved": 2,
+    "comparison": "order.html?image=1-175"
   }
 }
