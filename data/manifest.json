@@ -29,20 +29,18 @@
       "name": "1-50",
       "width": 537,
       "height": 875,
-      "boxes": 880,
+      "boxes": 875,
       "issues": [
         {
           "id": 101,
           "kind": "高重叠框复核",
           "level": "待确认",
-          "description": "仍有 3 对框重叠度达到 0.5，请核对是否同一字形重复。",
+          "description": "仍有 2 对框重叠度达到 0.5，请核对是否同一字形重复。",
           "indices": [
-            269,
-            270,
+            300,
             301,
-            302,
-            716,
-            717
+            711,
+            712
           ]
         }
       ],
@@ -51,8 +49,8 @@
       "annotatorSource": "依据源 XML 图片路径中的姓名：王文轩",
       "reviewed": false,
       "revision": 0,
-      "sourceSha256": "7008ee602650e236eb7c0abedd07d8fcb74e4283f58a90e59b43200f228b1a5c",
-      "annotationImportedAt": "2026-09-29T14:51:18+08:00"
+      "sourceSha256": "7bfe88262c0952d7377c0fd0d948851bc1f146086cdaeeab30ffa847d87e6d6a",
+      "annotationImportedAt": "2026-09-29T15:21:10+08:00"
     },
     {
       "name": "1-115",
