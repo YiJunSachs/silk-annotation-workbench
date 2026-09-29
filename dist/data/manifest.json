@@ -208,56 +208,6 @@
       "annotatorSource": "依据提交文件夹：帛书标注_乔怡凯"
     },
     {
-      "name": "1-179",
-      "width": 465,
-      "height": 850,
-      "boxes": 209,
-      "issues": [
-        {
-          "id": 100,
-          "kind": "坐标完全重复",
-          "level": "需修正",
-          "description": "仍有 7 个多余同坐标实例，请逐项核对。",
-          "indices": [
-            123,
-            124,
-            139,
-            140,
-            141,
-            149,
-            150,
-            155,
-            156,
-            164,
-            165,
-            202,
-            203
-          ]
-        }
-      ],
-      "severity": "需修正",
-      "annotator": "乔怡凯",
-      "annotatorSource": "依据提交文件夹：帛书标注_乔怡凯",
-      "reviewed": false,
-      "revision": 0,
-      "sourceSha256": "e045e33f1e006d0b83828835dcadaa32d41223ccc79402dcff6d7a6ea94936d5",
-      "annotationImportedAt": "2026-09-29T14:51:18+08:00"
-    },
-    {
-      "name": "1-211",
-      "width": 577,
-      "height": 849,
-      "boxes": 780,
-      "issues": [],
-      "severity": "待确认",
-      "annotator": "王文轩",
-      "annotatorSource": "依据源 XML 图片路径中的姓名：王文轩",
-      "reviewed": false,
-      "revision": 0,
-      "sourceSha256": "3cdbaf27de823e4d34f5faa1a5f2ad46ae8bda639b9c00db77f6840a30b51e9a",
-      "annotationImportedAt": "2026-09-29T14:51:18+08:00"
-    },
-    {
       "name": "1-260",
       "width": 267,
       "height": 826,
