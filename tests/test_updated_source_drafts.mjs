@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';
+globalThis.location=new URL('https://example.test/silk/');
+const old={revision:4,reviewed:false,updatedAt:'2026-09-28T10:00:00Z',shapes:[{id:'old:1',label:'旧',box:[1,1,8,8]}],resolved:[]};
+const source={name:'1-50',width:20,height:20,reviewed:false,revision:0,sourceSha256:'new-source',importedAnnotation:{importedAt:'2026-09-29T10:00:00Z'},shapes:[{id:'new:1',sourceIndex:1,label:'新',box:[2,2,9,9]}],issues:[]};
+const manifest={files:[{name:'1-50',boxes:1,reviewed:false,sourceSha256:'new-source',annotationImportedAt:'2026-09-29T10:00:00Z'}]};
+globalThis.fetch=async url=>({ok:true,json:async()=>structuredClone(String(url).includes('manifest.json')?manifest:source)});
+const records=new Map([['doc:1-50',old]]);
+globalThis.indexedDB={open(){const request={};queueMicrotask(()=>{request.result={transaction(){const tx={objectStore(){return {get(key){const r={};queueMicrotask(()=>{r.result=records.get(key);r.onsuccess();if(tx.oncomplete)queueMicrotask(()=>tx.oncomplete());});return r;},put(value,key){records.set(key,structuredClone(value));}};}};return tx;}};request.onsuccess();});return request;}};
+const {api}=await import('../dist/browser-api.js');
+let m=await api('/api/manifest');assert.equal(m.files[0].boxes,1);assert.equal(m.files[0].revision,0);
+let doc=await api('/api/doc/1-50');assert.equal(doc.shapes[0].label,'新');assert.equal(doc.oldDraftAvailable,true);
+assert.equal((await api('/api/old-draft/1-50')).shapes[0].label,'旧');
+await assert.rejects(api('/api/draft',{name:'1-50',revision:0,baseSourceSha256:'old-source',shapes:source.shapes,resolved:[],reviewed:false}),/源文件已更新/);
+const saved=await api('/api/draft',{name:'1-50',revision:0,baseSourceSha256:'new-source',shapes:source.shapes,resolved:[],reviewed:false});assert.equal(saved.revision,1);
+assert.equal((await api('/api/doc/1-50')).shapes[0].label,'新');
+assert.equal((await api('/api/old-draft/1-50')).shapes[0].label,'旧');
+assert.ok([...records.keys()].some(k=>k.startsWith('archived-doc:doc:1-50:')));
+console.log('PASS: new source is visible, old draft remains downloadable, first new edit archives it.');

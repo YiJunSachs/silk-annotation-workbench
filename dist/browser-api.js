@@ -7,26 +7,44 @@ async function staticJson(path){const r=await fetch(new URL(path.replace(/^\//,'
 export function ready(){return readyPromise ??= (async()=>{if(!browserMode){try{const r=await fetch('/api/manifest');const m=await r.json();if(!r.ok||!Array.isArray(m.files))browserMode=true;}catch{browserMode=true;}}return browserMode;})();}
 function database(){return dbPromise ??= new Promise((resolve,reject)=>{const r=indexedDB.open('silk-annotations:'+root.pathname,1);r.onupgradeneeded=()=>r.result.createObjectStore('records');r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(Error('浏览器无法保存草稿，请允许此网站使用本地存储'));});}
 async function read(key){const db=await database();return new Promise((resolve,reject)=>{const r=db.transaction('records').objectStore('records').get(key);r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error);});}
-async function write(key,revision,value){
+function staleDraft(draft,source){
+  if(!draft||!source?.importedAnnotation&&!source?.annotationImportedAt)return false;
+  if(draft.baseSourceSha256)return draft.baseSourceSha256!==source.sourceSha256;
+  return true; // Drafts saved before source-version tracking belong to the previous annotation.
+}
+async function oldDraft(name,source){
+  const key='doc:'+name,current=await read(key);
+  if(staleDraft(current,source))return current;
+  const latest=await read('archived-latest:'+key);
+  return latest?read(latest.key):undefined;
+}
+async function write(key,revision,value,source){
   const db=await database();
   return new Promise((resolve,reject)=>{const tx=db.transaction('records','readwrite'),store=tx.objectStore('records'),r=store.get(key);let result,error;
-    r.onsuccess=()=>{if((r.result?.revision??0)!==revision){error=Error('此记录已在其他窗口更新，请刷新后继续；未覆盖已有草稿');tx.abort();return;}result={...clone(value),revision:revision+1,updatedAt:new Date().toISOString()};store.put(result,key);};
+    r.onsuccess=()=>{const previous=r.result,stale=staleDraft(previous,source);
+      if((previous?.revision??0)!==revision&&!(stale&&revision===0)){error=Error('此记录已在其他窗口更新，请刷新后继续；未覆盖已有草稿');tx.abort();return;}
+      if(stale){const archived='archived-doc:'+key+':'+Date.now();store.put(previous,archived);store.put({key:archived},'archived-latest:'+key);}
+      result={...clone(value),revision:stale?1:revision+1,updatedAt:new Date().toISOString()};store.put(result,key);};
     tx.oncomplete=()=>resolve(result);tx.onabort=()=>reject(error||tx.error||Error('草稿保存失败'));tx.onerror=()=>{error=tx.error;};
   });
 }
 function originalManifest(){return manifestPromise ??= staticJson('data/manifest.json');}
 async function original(name){const m=await originalManifest();if(!m.files.some(f=>f.name===name))throw Error('不存在的图片编号');return staticJson('data/'+encodeURIComponent(name)+'.json');}
-async function annotationDocument(name){const source=await original(name),draft=await read('doc:'+name);return {...source,...draft};}
+async function annotationDocument(name){const source=await original(name),draft=await read('doc:'+name);const old=await oldDraft(name,source);return {...source,...(staleDraft(draft,source)?{}:draft),oldDraftAvailable:!!old};}
 export async function api(path,data){
   await ready();
   if(!browserMode){const r=await fetch(path,data?{method:'POST',headers:{'Content-Type':'application/json','X-Silk-Editor':'1'},body:JSON.stringify(data)}:{});const result=await r.json();if(!r.ok)throw Error(result.error||'请求失败');return result;}
   if(path.startsWith('/data/'))return staticJson(path);
   if(path==='/api/manifest'){
     const m=clone(await originalManifest());
-    await Promise.all(m.files.map(async f=>{const d=await read('doc:'+f.name);f.revision=d?.revision??0;f.reviewed=d?.reviewed??f.reviewed??false;if(d)f.boxes=d.shapes.length;}));
+    await Promise.all(m.files.map(async f=>{const d=await read('doc:'+f.name),active=staleDraft(d,f)?null:d;f.revision=active?.revision??0;f.reviewed=active?.reviewed??f.reviewed??false;if(active)f.boxes=active.shapes.length;}));
     m.outputPath='当前浏览器草稿；标注文件通过下载保存';return m;
   }
   if(path.startsWith('/api/doc/'))return annotationDocument(decodeURIComponent(path.slice('/api/doc/'.length)));
+  if(path.startsWith('/api/old-draft/')){
+    const name=decodeURIComponent(path.slice('/api/old-draft/'.length)),source=await original(name),draft=await oldDraft(name,source);
+    if(!draft)throw Error('没有可下载的旧草稿');return {name,...draft};
+  }
   if(path==='/api/discussion'){
     if(!data)return await read('discussion')||{revision:0,items:{}};
     const m=await staticJson('data/fragments.json'),names=new Set(m.files.map(f=>f.name));
@@ -35,8 +53,9 @@ export async function api(path,data){
   }
   if(path==='/api/draft'){
     const d=await original(data.name);validateShapes(d,data.shapes);
+    if(data.baseSourceSha256!==d.sourceSha256)throw Error('标注源文件已更新，请刷新页面后再编辑；旧草稿仍保存在浏览器中');
     const ids=new Set(data.shapes.map(s=>s.id));if(!Array.isArray(data.resolved)||data.resolved.some(id=>!ids.has(id))||typeof data.reviewed!=='boolean')throw Error('复核状态无效');
-    return write('doc:'+data.name,data.revision,{shapes:data.shapes,resolved:data.resolved,reviewed:data.reviewed});
+    return write('doc:'+data.name,data.revision,{shapes:data.shapes,resolved:data.resolved,reviewed:data.reviewed,baseSourceSha256:d.sourceSha256},d);
   }
   if(path==='/api/save'){
     const d=await annotationDocument(data.name);if(d.revision!==data.revision)throw Error('此图已在其他窗口更新，请刷新后再导出');
