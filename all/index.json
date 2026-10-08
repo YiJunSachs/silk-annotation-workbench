@@ -1,7 +1,7 @@
 {
   "schema": "silk-all-visualization-v1",
-  "images": 167,
-  "boxes": 71289,
+  "images": 159,
+  "boxes": 67184,
   "files": [
     {
       "name": "1-23",
@@ -85,7 +85,13 @@
       "image": "all/images/1-26.jpg",
       "data": "all/data/1-26.json",
       "orderAdjusted": false,
-      "orderReview": false
+      "orderReview": false,
+      "orderReviewDecision": {
+        "choice": "after",
+        "updatedAt": "2026-10-08T16:22:34+08:00",
+        "version": "20260929-order1",
+        "name": "1-26"
+      }
     },
     {
       "name": "1-27",
@@ -123,7 +129,13 @@
       "image": "all/images/1-28.jpg",
       "data": "all/data/1-28.json",
       "orderAdjusted": false,
-      "orderReview": false
+      "orderReview": false,
+      "orderReviewDecision": {
+        "choice": "after",
+        "updatedAt": "2026-10-08T16:22:41+08:00",
+        "version": "20260929-order1",
+        "name": "1-28"
+      }
     },
     {
       "name": "1-29",
@@ -183,7 +195,13 @@
       "image": "images/1-31.png",
       "data": "all/data/1-31.json",
       "orderAdjusted": false,
-      "orderReview": false
+      "orderReview": false,
+      "orderReviewDecision": {
+        "choice": "after",
+        "updatedAt": "2026-10-08T16:22:45+08:00",
+        "version": "20260929-order1",
+        "name": "1-31"
+      }
     },
     {
       "name": "1-32",
@@ -244,8 +262,9 @@
       "thumb": "all/thumbs/1-34.jpg",
       "image": "all/images/1-34.jpg",
       "data": "all/data/1-34.json",
-      "orderAdjusted": false,
-      "orderReview": false
+      "orderAdjusted": true,
+      "orderReview": false,
+      "orderRepair": "20261008-rtl"
     },
     {
       "name": "1-35",
@@ -500,22 +519,6 @@
       }
     },
     {
-      "name": "1-60",
-      "boxes": 395,
-      "width": 496,
-      "height": 938,
-      "group": "result",
-      "annotator": "待确认",
-      "editable": false,
-      "reviewed": false,
-      "issues": [],
-      "thumb": "all/thumbs/1-60.jpg",
-      "image": "all/images/1-60.jpg",
-      "data": "all/data/1-60.json",
-      "orderAdjusted": true,
-      "orderReview": false
-    },
-    {
       "name": "1-61",
       "boxes": 671,
       "width": 446,
@@ -529,7 +532,13 @@
       "image": "all/images/1-61.jpg",
       "data": "all/data/1-61.json",
       "orderAdjusted": true,
-      "orderReview": false
+      "orderReview": false,
+      "orderReviewDecision": {
+        "choice": "after",
+        "updatedAt": "2026-10-08T11:10:23+08:00",
+        "version": "20260929-order1",
+        "name": "1-61"
+      }
     },
     {
       "name": "1-62",
@@ -579,7 +588,13 @@
       "image": "images/1-65.png",
       "data": "all/data/1-65.json",
       "orderAdjusted": true,
-      "orderReview": false
+      "orderReview": false,
+      "orderReviewDecision": {
+        "choice": "after",
+        "updatedAt": "2026-10-08T11:10:43+08:00",
+        "version": "20260929-order1",
+        "name": "1-65"
+      }
     },
     {
       "name": "1-67",
@@ -613,7 +628,13 @@
       "image": "all/images/1-68.jpg",
       "data": "all/data/1-68.json",
       "orderAdjusted": true,
-      "orderReview": false
+      "orderReview": false,
+      "orderReviewDecision": {
+        "choice": "after",
+        "updatedAt": "2026-10-08T11:18:52+08:00",
+        "version": "20260929-order1",
+        "name": "1-68"
+      }
     },
     {
       "name": "1-95",
@@ -629,41 +650,13 @@
       "image": "all/images/1-95.jpg",
       "data": "all/data/1-95.json",
       "orderAdjusted": true,
-      "orderReview": false
-    },
-    {
-      "name": "1-96",
-      "boxes": 470,
-      "width": 561,
-      "height": 783,
-      "group": "silk1",
-      "annotator": "张择谦",
-      "editable": true,
-      "reviewed": false,
-      "issues": [
-        "多字标签"
-      ],
-      "thumb": "all/thumbs/1-96.jpg",
-      "image": "images/1-96.png",
-      "data": "all/data/1-96.json",
-      "orderAdjusted": true,
-      "orderReview": false
-    },
-    {
-      "name": "1-97",
-      "boxes": 554,
-      "width": 600,
-      "height": 876,
-      "group": "何舒畅",
-      "annotator": "何舒畅",
-      "editable": false,
-      "reviewed": false,
-      "issues": [],
-      "thumb": "all/thumbs/1-97.jpg",
-      "image": "all/images/1-97.jpg",
-      "data": "all/data/1-97.json",
-      "orderAdjusted": true,
-      "orderReview": false
+      "orderReview": false,
+      "orderReviewDecision": {
+        "choice": "after",
+        "updatedAt": "2026-10-08T11:19:16+08:00",
+        "version": "20260929-order1",
+        "name": "1-95"
+      }
     },
     {
       "name": "1-98",
@@ -681,26 +674,13 @@
       "image": "all/images/1-98.jpg",
       "data": "all/data/1-98.json",
       "orderAdjusted": true,
-      "orderReview": false
-    },
-    {
-      "name": "1-100",
-      "boxes": 739,
-      "width": 594,
-      "height": 878,
-      "group": "沙千里-skill",
-      "annotator": "沙千里",
-      "editable": false,
-      "reviewed": false,
-      "issues": [
-        "未知字",
-        "分区顺序待复核"
-      ],
-      "thumb": "all/thumbs/1-100.jpg",
-      "image": "all/images/1-100.jpg",
-      "data": "all/data/1-100.json",
-      "orderAdjusted": true,
-      "orderReview": true
+      "orderReview": false,
+      "orderReviewDecision": {
+        "choice": "after",
+        "updatedAt": "2026-10-08T12:48:14+08:00",
+        "version": "20260929-order1",
+        "name": "1-98"
+      }
     },
     {
       "name": "1-101",
@@ -716,7 +696,8 @@
       "image": "all/images/1-101.jpg",
       "data": "all/data/1-101.json",
       "orderAdjusted": true,
-      "orderReview": false
+      "orderReview": false,
+      "orderRepair": "20261008-rtl"
     },
     {
       "name": "1-102",
@@ -732,7 +713,13 @@
       "image": "all/images/1-102.jpg",
       "data": "all/data/1-102.json",
       "orderAdjusted": true,
-      "orderReview": false
+      "orderReview": false,
+      "orderReviewDecision": {
+        "choice": "after",
+        "updatedAt": "2026-10-08T12:48:45+08:00",
+        "version": "20260929-order1",
+        "name": "1-102"
+      }
     },
     {
       "name": "1-103",
@@ -814,7 +801,13 @@
       "image": "all/images/1-108.jpg",
       "data": "all/data/1-108.json",
       "orderAdjusted": true,
-      "orderReview": false
+      "orderReview": false,
+      "orderReviewDecision": {
+        "choice": "after",
+        "updatedAt": "2026-10-08T12:55:58+08:00",
+        "version": "20260929-order1",
+        "name": "1-108"
+      }
     },
     {
       "name": "1-109",
@@ -830,26 +823,13 @@
       "image": "all/images/1-109.jpg",
       "data": "all/data/1-109.json",
       "orderAdjusted": true,
-      "orderReview": false
-    },
-    {
-      "name": "1-110",
-      "boxes": 727,
-      "width": 548,
-      "height": 872,
-      "group": "单朱玉",
-      "annotator": "单朱玉",
-      "editable": true,
-      "reviewed": false,
-      "issues": [
-        "未知字",
-        "分区顺序待复核"
-      ],
-      "thumb": "all/thumbs/1-110.jpg",
-      "image": "images/1-110.png",
-      "data": "all/data/1-110.json",
-      "orderAdjusted": true,
-      "orderReview": true
+      "orderReview": false,
+      "orderReviewDecision": {
+        "choice": "after",
+        "updatedAt": "2026-10-08T15:08:01+08:00",
+        "version": "20260929-order1",
+        "name": "1-109"
+      }
     },
     {
       "name": "1-111",
@@ -865,7 +845,13 @@
       "image": "all/images/1-111.jpg",
       "data": "all/data/1-111.json",
       "orderAdjusted": true,
-      "orderReview": false
+      "orderReview": false,
+      "orderReviewDecision": {
+        "choice": "after",
+        "updatedAt": "2026-10-08T15:08:53+08:00",
+        "version": "20260929-order1",
+        "name": "1-111"
+      }
     },
     {
       "name": "1-112",
@@ -883,7 +869,13 @@
       "image": "all/images/1-112.jpg",
       "data": "all/data/1-112.json",
       "orderAdjusted": true,
-      "orderReview": true
+      "orderReview": true,
+      "orderReviewDecision": {
+        "choice": "after",
+        "updatedAt": "2026-10-08T15:15:36+08:00",
+        "version": "20260929-order1",
+        "name": "1-112"
+      }
     },
     {
       "name": "1-113",
@@ -901,7 +893,13 @@
       "image": "images/1-113.png",
       "data": "all/data/1-113.json",
       "orderAdjusted": true,
-      "orderReview": false
+      "orderReview": false,
+      "orderReviewDecision": {
+        "choice": "after",
+        "updatedAt": "2026-10-08T15:17:58+08:00",
+        "version": "20260929-order1",
+        "name": "1-113"
+      }
     },
     {
       "name": "1-115",
@@ -917,26 +915,13 @@
       "image": "images/1-115.png",
       "data": "all/data/1-115.json",
       "orderAdjusted": true,
-      "orderReview": false
-    },
-    {
-      "name": "1-116",
-      "boxes": 387,
-      "width": 582,
-      "height": 871,
-      "group": "沙千里-skill",
-      "annotator": "沙千里",
-      "editable": false,
-      "reviewed": false,
-      "issues": [
-        "未知字",
-        "分区顺序待复核"
-      ],
-      "thumb": "all/thumbs/1-116.jpg",
-      "image": "all/images/1-116.jpg",
-      "data": "all/data/1-116.json",
-      "orderAdjusted": true,
-      "orderReview": true
+      "orderReview": false,
+      "orderReviewDecision": {
+        "choice": "after",
+        "updatedAt": "2026-10-08T15:25:19+08:00",
+        "version": "20260929-order1",
+        "name": "1-115"
+      }
     },
     {
       "name": "1-117",
@@ -952,7 +937,8 @@
       "image": "all/images/1-117.jpg",
       "data": "all/data/1-117.json",
       "orderAdjusted": true,
-      "orderReview": false
+      "orderReview": false,
+      "orderRepair": "20261008-rtl"
     },
     {
       "name": "1-118",
@@ -970,7 +956,13 @@
       "image": "all/images/1-118.jpg",
       "data": "all/data/1-118.json",
       "orderAdjusted": true,
-      "orderReview": true
+      "orderReview": true,
+      "orderReviewDecision": {
+        "choice": "after",
+        "updatedAt": "2026-10-08T16:22:20+08:00",
+        "version": "20260929-order1",
+        "name": "1-118"
+      }
     },
     {
       "name": "1-119",
@@ -1066,7 +1058,13 @@
       "image": "images/1-125.png",
       "data": "all/data/1-125.json",
       "orderAdjusted": true,
-      "orderReview": false
+      "orderReview": false,
+      "orderReviewDecision": {
+        "choice": "after",
+        "updatedAt": "2026-10-08T15:27:49+08:00",
+        "version": "20260929-order1",
+        "name": "1-125"
+      }
     },
     {
       "name": "1-126",
@@ -1118,7 +1116,13 @@
       "image": "all/images/1-128.jpg",
       "data": "all/data/1-128.json",
       "orderAdjusted": true,
-      "orderReview": false
+      "orderReview": false,
+      "orderReviewDecision": {
+        "choice": "after",
+        "updatedAt": "2026-10-08T15:59:49+08:00",
+        "version": "20260929-order1",
+        "name": "1-128"
+      }
     },
     {
       "name": "1-129",
@@ -1150,7 +1154,13 @@
       "image": "images/1-130.png",
       "data": "all/data/1-130.json",
       "orderAdjusted": true,
-      "orderReview": false
+      "orderReview": false,
+      "orderReviewDecision": {
+        "choice": "after",
+        "updatedAt": "2026-10-08T16:00:40+08:00",
+        "version": "20260929-order1",
+        "name": "1-130"
+      }
     },
     {
       "name": "1-131",
@@ -1168,7 +1178,13 @@
       "image": "all/images/1-131.jpg",
       "data": "all/data/1-131.json",
       "orderAdjusted": true,
-      "orderReview": false
+      "orderReview": false,
+      "orderReviewDecision": {
+        "choice": "after",
+        "updatedAt": "2026-10-08T16:04:23+08:00",
+        "version": "20260929-order1",
+        "name": "1-131"
+      }
     },
     {
       "name": "1-132",
@@ -1232,7 +1248,13 @@
       "image": "all/images/1-136.jpg",
       "data": "all/data/1-136.json",
       "orderAdjusted": true,
-      "orderReview": false
+      "orderReview": false,
+      "orderReviewDecision": {
+        "choice": "after",
+        "updatedAt": "2026-10-08T16:05:04+08:00",
+        "version": "20260929-order1",
+        "name": "1-136"
+      }
     },
     {
       "name": "1-140",
@@ -1330,7 +1352,13 @@
       "image": "all/images/1-145.jpg",
       "data": "all/data/1-145.json",
       "orderAdjusted": true,
-      "orderReview": false
+      "orderReview": false,
+      "orderReviewDecision": {
+        "choice": "after",
+        "updatedAt": "2026-10-08T16:05:19+08:00",
+        "version": "20260929-order1",
+        "name": "1-145"
+      }
     },
     {
       "name": "1-146",
@@ -1348,7 +1376,13 @@
       "image": "all/images/1-146.jpg",
       "data": "all/data/1-146.json",
       "orderAdjusted": true,
-      "orderReview": false
+      "orderReview": false,
+      "orderReviewDecision": {
+        "choice": "after",
+        "updatedAt": "2026-10-08T16:06:57+08:00",
+        "version": "20260929-order1",
+        "name": "1-146"
+      }
     },
     {
       "name": "1-147",
@@ -1382,25 +1416,13 @@
       "image": "images/1-148.png",
       "data": "all/data/1-148.json",
       "orderAdjusted": true,
-      "orderReview": false
-    },
-    {
-      "name": "1-149",
-      "boxes": 490,
-      "width": 501,
-      "height": 884,
-      "group": "沙千里-skill",
-      "annotator": "沙千里",
-      "editable": false,
-      "reviewed": false,
-      "issues": [
-        "分区顺序待复核"
-      ],
-      "thumb": "all/thumbs/1-149.jpg",
-      "image": "all/images/1-149.jpg",
-      "data": "all/data/1-149.json",
-      "orderAdjusted": true,
-      "orderReview": true
+      "orderReview": false,
+      "orderReviewDecision": {
+        "choice": "after",
+        "updatedAt": "2026-10-08T16:05:47+08:00",
+        "version": "20260929-order1",
+        "name": "1-148"
+      }
     },
     {
       "name": "1-150",
@@ -1415,8 +1437,9 @@
       "thumb": "all/thumbs/1-150.jpg",
       "image": "all/images/1-150.jpg",
       "data": "all/data/1-150.json",
-      "orderAdjusted": false,
-      "orderReview": false
+      "orderAdjusted": true,
+      "orderReview": false,
+      "orderRepair": "20261008-rtl"
     },
     {
       "name": "1-151",
@@ -1432,7 +1455,13 @@
       "image": "all/images/1-151.jpg",
       "data": "all/data/1-151.json",
       "orderAdjusted": true,
-      "orderReview": false
+      "orderReview": false,
+      "orderReviewDecision": {
+        "choice": "after",
+        "updatedAt": "2026-10-08T16:07:24+08:00",
+        "version": "20260929-order1",
+        "name": "1-151"
+      }
     },
     {
       "name": "1-171",
@@ -1466,22 +1495,6 @@
       "image": "all/images/1-173.jpg",
       "data": "all/data/1-173.json",
       "orderAdjusted": false,
-      "orderReview": false
-    },
-    {
-      "name": "1-174",
-      "boxes": 343,
-      "width": 562,
-      "height": 853,
-      "group": "label",
-      "annotator": "待确认",
-      "editable": false,
-      "reviewed": false,
-      "issues": [],
-      "thumb": "all/thumbs/1-174.jpg",
-      "image": "all/images/1-174.jpg",
-      "data": "all/data/1-174.json",
-      "orderAdjusted": true,
       "orderReview": false
     },
     {
