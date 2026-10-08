@@ -15,9 +15,9 @@ export function installRemoval({getName,beforePreview=async()=>true}){
   const name=getName();if(!name){message.textContent='请先选择并加载一张图片。';dialog.showModal();return;}
   button.disabled=true;
   try{if(!await beforePreview())return;message.textContent='正在核对 '+name+' 的文件…';dialog.showModal();preview=await request('/api/removal-preview?name='+encodeURIComponent(name));
-   message.textContent=`当前图片：${preview.name} · ${preview.boxes} 个框\n将剔除 ${preview.fileCount} 个相关文件，包括源标注、图片、坐标、GT、本机草稿及工作台副本。剔除后剩 ${preview.remainingImages} 组。\n备份位置：${preview.backupPath}\n本机列表会同步更新。公网网站需另行发布同步。`;
+   message.textContent=`当前图片：${preview.name} · ${preview.boxes} 个框\n将剔除 ${preview.fileCount} 个相关文件，包括源标注、图片、坐标、GT、本机草稿及工作台副本。剔除后剩 ${preview.remainingImages} 组。\n备份位置：${preview.backupPath}\n本机列表会同步更新。公网网站需另行发布同步。${preview.preservedSources?.length?'\n外部原始图片保留，不会删除：\n'+preview.preservedSources.join('\n'):''}`;
    dialog.querySelector('pre').textContent=preview.files.join('\n');dialog.querySelector('details').hidden=false;dialog.querySelector('.removal-label').hidden=false;confirm.focus();
-  }catch(e){message.textContent='未剔除：'+e.message;}finally{button.disabled=false;}
+  }catch(e){preview=null;message.textContent='无法开始剔除：'+e.message+'\n尚未移除任何文件。可关闭窗口后重试。';cancel.textContent='关闭';}finally{button.disabled=false;}
  };
  apply.onclick=async()=>{
   if(!preview||working||confirm.value.trim()!==preview.name)return;working=true;apply.disabled=true;cancel.disabled=true;confirm.disabled=true;message.textContent='正在备份并校验 '+preview.name+'，随后剔除…';

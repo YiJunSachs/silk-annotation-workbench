@@ -1,4 +1,4 @@
-import {installRemoval} from './dataset-removal.js?v=20261008-1';
+import {installRemoval} from './dataset-removal.js?v=20261008-2';
 import {api,exportBlob,exportReviewedDrafts,downloadBlob,browserMode} from './browser-api.js?v=20260929-source-refresh';
 const $=id=>document.getElementById(id),NS='http://www.w3.org/2000/svg';
 const state={manifest:null,doc:null,selected:null,mode:'select',scale:1,tx:0,ty:0,history:[],future:[],dirty:false,version:0,saving:null,timer:null,gallery:false,space:false,drag:null,loading:false,problemOnly:false};
