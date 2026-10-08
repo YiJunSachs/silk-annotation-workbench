@@ -252,16 +252,6 @@
       "data": "order/data/1-62.json"
     },
     {
-      "name": "1-64",
-      "boxes": 559,
-      "moved": 0,
-      "review": false,
-      "annotator": "高瑾轩",
-      "thumb": "all/thumbs/1-64.jpg",
-      "image": "all/images/1-64.jpg",
-      "data": "order/data/1-64.json"
-    },
-    {
       "name": "1-65",
       "boxes": 705,
       "moved": 2,
@@ -454,7 +444,7 @@
     {
       "name": "1-119",
       "boxes": 466,
-      "moved": 0,
+      "moved": 413,
       "review": false,
       "annotator": "待确认",
       "thumb": "all/thumbs/1-119.jpg",
@@ -1592,7 +1582,7 @@
       "data": "order/data/2-146.json"
     }
   ],
-  "changed": 88,
+  "changed": 89,
   "review": 44,
-  "boxes": 67184
+  "boxes": 66625
 }

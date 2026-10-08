@@ -1,7 +1,7 @@
 {
   "schema": "silk-all-visualization-v1",
-  "images": 159,
-  "boxes": 67184,
+  "images": 158,
+  "boxes": 66625,
   "files": [
     {
       "name": "1-23",
@@ -264,7 +264,13 @@
       "data": "all/data/1-34.json",
       "orderAdjusted": true,
       "orderReview": false,
-      "orderRepair": "20261008-rtl"
+      "orderRepair": "20261008-rtl",
+      "orderReviewDecision": {
+        "choice": "after",
+        "updatedAt": "2026-10-08T16:37:32+08:00",
+        "version": "20260929-order1",
+        "name": "1-34"
+      }
     },
     {
       "name": "1-35",
@@ -280,7 +286,13 @@
       "image": "images/1-35.png",
       "data": "all/data/1-35.json",
       "orderAdjusted": false,
-      "orderReview": false
+      "orderReview": false,
+      "orderReviewDecision": {
+        "choice": "after",
+        "updatedAt": "2026-10-08T16:48:59+08:00",
+        "version": "20260929-order1",
+        "name": "1-35"
+      }
     },
     {
       "name": "1-36",
@@ -554,23 +566,13 @@
       "image": "all/images/1-62.jpg",
       "data": "all/data/1-62.json",
       "orderAdjusted": false,
-      "orderReview": false
-    },
-    {
-      "name": "1-64",
-      "boxes": 559,
-      "width": 472,
-      "height": 872,
-      "group": "高瑾轩",
-      "annotator": "高瑾轩",
-      "editable": false,
-      "reviewed": false,
-      "issues": [],
-      "thumb": "all/thumbs/1-64.jpg",
-      "image": "all/images/1-64.jpg",
-      "data": "all/data/1-64.json",
-      "orderAdjusted": false,
-      "orderReview": false
+      "orderReview": false,
+      "orderReviewDecision": {
+        "choice": "after",
+        "updatedAt": "2026-10-08T16:49:38+08:00",
+        "version": "20260929-order1",
+        "name": "1-62"
+      }
     },
     {
       "name": "1-65",
@@ -612,7 +614,13 @@
       "image": "all/images/1-67.jpg",
       "data": "all/data/1-67.json",
       "orderAdjusted": false,
-      "orderReview": false
+      "orderReview": false,
+      "orderReviewDecision": {
+        "choice": "after",
+        "updatedAt": "2026-10-08T16:53:21+08:00",
+        "version": "20260929-order1",
+        "name": "1-67"
+      }
     },
     {
       "name": "1-68",
@@ -697,7 +705,13 @@
       "data": "all/data/1-101.json",
       "orderAdjusted": true,
       "orderReview": false,
-      "orderRepair": "20261008-rtl"
+      "orderRepair": "20261008-rtl",
+      "orderReviewDecision": {
+        "choice": "after",
+        "updatedAt": "2026-10-08T16:36:54+08:00",
+        "version": "20260929-order1",
+        "name": "1-101"
+      }
     },
     {
       "name": "1-102",
@@ -735,7 +749,13 @@
       "image": "images/1-103.png",
       "data": "all/data/1-103.json",
       "orderAdjusted": false,
-      "orderReview": false
+      "orderReview": false,
+      "orderReviewDecision": {
+        "choice": "after",
+        "updatedAt": "2026-10-08T16:56:32+08:00",
+        "version": "20260929-order1",
+        "name": "1-103"
+      }
     },
     {
       "name": "1-105",
@@ -751,7 +771,13 @@
       "image": "all/images/1-105.jpg",
       "data": "all/data/1-105.json",
       "orderAdjusted": false,
-      "orderReview": false
+      "orderReview": false,
+      "orderReviewDecision": {
+        "choice": "after",
+        "updatedAt": "2026-10-08T16:59:28+08:00",
+        "version": "20260929-order1",
+        "name": "1-105"
+      }
     },
     {
       "name": "1-106",
@@ -769,7 +795,13 @@
       "image": "all/images/1-106.jpg",
       "data": "all/data/1-106.json",
       "orderAdjusted": false,
-      "orderReview": false
+      "orderReview": false,
+      "orderReviewDecision": {
+        "choice": "after",
+        "updatedAt": "2026-10-08T17:00:36+08:00",
+        "version": "20260929-order1",
+        "name": "1-106"
+      }
     },
     {
       "name": "1-107",
@@ -785,7 +817,13 @@
       "image": "all/images/1-107.jpg",
       "data": "all/data/1-107.json",
       "orderAdjusted": false,
-      "orderReview": false
+      "orderReview": false,
+      "orderReviewDecision": {
+        "choice": "after",
+        "updatedAt": "2026-10-08T17:01:21+08:00",
+        "version": "20260929-order1",
+        "name": "1-107"
+      }
     },
     {
       "name": "1-108",
@@ -938,7 +976,13 @@
       "data": "all/data/1-117.json",
       "orderAdjusted": true,
       "orderReview": false,
-      "orderRepair": "20261008-rtl"
+      "orderRepair": "20261008-rtl",
+      "orderReviewDecision": {
+        "choice": "after",
+        "updatedAt": "2026-10-08T16:38:16+08:00",
+        "version": "20260929-order1",
+        "name": "1-117"
+      }
     },
     {
       "name": "1-118",
@@ -977,7 +1021,7 @@
       "thumb": "all/thumbs/1-119.jpg",
       "image": "all/images/1-119.jpg",
       "data": "all/data/1-119.json",
-      "orderAdjusted": false,
+      "orderAdjusted": true,
       "orderReview": false
     },
     {
@@ -1439,7 +1483,13 @@
       "data": "all/data/1-150.json",
       "orderAdjusted": true,
       "orderReview": false,
-      "orderRepair": "20261008-rtl"
+      "orderRepair": "20261008-rtl",
+      "orderReviewDecision": {
+        "choice": "after",
+        "updatedAt": "2026-10-08T16:38:54+08:00",
+        "version": "20260929-order1",
+        "name": "1-150"
+      }
     },
     {
       "name": "1-151",
@@ -2946,7 +2996,13 @@
       "image": "all/images/2-134.jpg",
       "data": "all/data/2-134.json",
       "orderAdjusted": true,
-      "orderReview": false
+      "orderReview": false,
+      "orderReviewDecision": {
+        "choice": "after",
+        "updatedAt": "2026-10-08T16:44:02+08:00",
+        "version": "20260929-order1",
+        "name": "2-134"
+      }
     },
     {
       "name": "2-146",
@@ -2962,7 +3018,13 @@
       "image": "all/images/2-146.jpg",
       "data": "all/data/2-146.json",
       "orderAdjusted": false,
-      "orderReview": false
+      "orderReview": false,
+      "orderReviewDecision": {
+        "choice": "after",
+        "updatedAt": "2026-10-08T16:40:54+08:00",
+        "version": "20260929-order1",
+        "name": "2-146"
+      }
     }
   ]
 }
