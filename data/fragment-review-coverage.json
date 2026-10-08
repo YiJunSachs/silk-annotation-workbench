@@ -633,7 +633,9 @@
       "name": "1-59",
       "bucket": "not_listed",
       "reviewBasis": "visual_overview",
-      "imageSha256": "b540b21b13ff4f87d90f1b78fedfc767364fc88ed008419fdf03d3a99a9941ac"
+      "imageSha256": "b540b21b13ff4f87d90f1b78fedfc767364fc88ed008419fdf03d3a99a9941ac",
+      "removedFromDataset": true,
+      "removedAt": "2026-10-08"
     },
     {
       "name": "1-60",
