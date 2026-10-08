@@ -4,7 +4,7 @@ from http.server import ThreadingHTTPServer,SimpleHTTPRequestHandler
 from pathlib import Path
 from urllib.parse import urlsplit,unquote,parse_qs
 import argparse,json,threading,math,io,zipfile,base64,shutil,os,uuid,xml.etree.ElementTree as ET,datetime
-import order_review
+import order_review,dataset_removal
 BASE=Path(__file__).resolve().parent;DIST=BASE/'dist';DRAFTS=BASE/'草稿';OUTPUT=BASE/'保存结果';LOCK=threading.RLock()
 MANIFEST=json.loads((DIST/'data/manifest.json').read_text());NAMES={r['name'] for r in MANIFEST['files']}
 def now():return datetime.datetime.now().astimezone().isoformat(timespec='seconds')
@@ -69,6 +69,8 @@ class Handler(SimpleHTTPRequestHandler):
   if not self.host_ok():return self.reply({'error':'无效访问地址'},403)
   u=urlsplit(self.path);path=unquote(u.path)
   try:
+   if path=='/api/removal-preview':
+    with LOCK:return self.reply(dataset_removal.preview(BASE,parse_qs(u.query).get('name',[''])[0]))
    if path=='/api/order-review':
     with LOCK:return self.reply(order_review.state(BASE))
    if path=='/api/discussion':
@@ -123,6 +125,12 @@ class Handler(SimpleHTTPRequestHandler):
      result={'revision':old['revision']+1,'items':items,'updatedAt':now()};atomic(p,encoded(result));return self.reply(result)
    if path=='/api/order-review':
     with LOCK:return self.reply(order_review.apply(BASE,data))
+   if path=='/api/remove-dataset':
+    with LOCK:
+     result=dataset_removal.apply(BASE,data)
+     MANIFEST.clear();MANIFEST.update(json.loads((DIST/'data/manifest.json').read_text()))
+     NAMES.clear();NAMES.update(r['name'] for r in MANIFEST['files'])
+     return self.reply(result)
    name=data.get('name');original(name)
    with LOCK:
     d=document(name)

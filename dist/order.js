@@ -1,3 +1,4 @@
+import {installRemoval} from './dataset-removal.js?v=20261008-1';
 const $=id=>document.getElementById(id),ns='http://www.w3.org/2000/svg';
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let index,doc,meta,selected=-1,version=0,changes=[],questions=[],position=[],scrollLock=false;
@@ -38,3 +39,5 @@ $('exportReview').onclick=()=>{const data={schema:'silk-order-review-v1',version
 $('importReview').onclick=()=>$('reviewFile').click();
 $('reviewFile').onchange=async e=>{const file=e.target.files[0];if(!file||busy)return;busy=true;let count=0;try{const v=JSON.parse(await file.text());if(v.schema!=='silk-order-review-v1'||v.version!==index.version||!v.items||typeof v.items!=='object')throw Error('文件格式或对照版本不匹配');const entries=Object.entries(v.items);for(const [n,r] of entries)if(!index.files.some(f=>f.name===n)||!['before','after'].includes(r.choice))throw Error('记录包含无效图片或选择');for(const [n,r] of entries){reviewStatus('正在同步 '+n+'…');await saveDecision(n,r.choice);count++;}renderList();reviewStatus('已导入并同步 '+count+' 页。');}catch(err){renderList();reviewStatus('已同步 '+count+' 页；其余未处理：'+err.message);}finally{busy=false;e.target.value='';for(const id of ['acceptAfter','acceptBefore','importReview'])$(id).disabled=false;}};
 try{const r=await fetch('order/index.json',{cache:'no-cache'});if(!r.ok)throw Error('对照清单读取失败');index=await r.json();await initReviews();$('summary').textContent=`${index.files.length} 组 · ${index.changed} 组顺序变化 · ${index.review} 组含待复核项`;renderList();const name=new URLSearchParams(location.search).get('image');await open(index.files.some(r=>r.name===name)?name:'1-52');}catch(e){$('summary').textContent=e.message;}
+
+installRemoval({getName:()=>meta?.name});

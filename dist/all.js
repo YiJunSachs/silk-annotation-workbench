@@ -1,3 +1,4 @@
+import {installRemoval} from './dataset-removal.js?v=20261008-1';
 const $=id=>document.getElementById(id),root=new URL('.',location.href),ns='http://www.w3.org/2000/svg';
 let index,record,selected=-1,currentName='',loadVersion=0;
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -15,3 +16,5 @@ function setZoom(){const percent=Number($('zoom').value);$('zoomValue').textCont
 async function openPage(name){const meta=index.files.find(r=>r.name===name);if(!meta)return;const version=++loadVersion;$('pageName').textContent='正在加载 '+name+'…';try{const response=await fetch(url(meta.data),{cache:'no-cache'});if(!response.ok)throw Error('标注读取失败');const d=await response.json();if(version!==loadVersion)return;if(d.name!==name||d.boxes.length!==meta.boxes)throw Error('图片与标注数量不一致');renderPage(meta,d);}catch(e){$('pageName').textContent=name+' 加载失败';$('selectedInfo').textContent=e.message;}}
 $('cards').onclick=e=>{const target=e.target.closest('[data-name]');if(target)openPage(target.dataset.name);};$('search').oninput=renderCards;$('filter').onchange=renderCards;$('boxLayer').onclick=e=>{const r=e.target.closest('rect[data-index]');if(r)select(Number(r.dataset.index));};$('gt').onclick=e=>{const b=e.target.closest('button[data-index]');if(b){const i=Number(b.dataset.index);select(i);centerOn(i);}};$('showBoxes').onchange=()=>$('imageScroll').classList.toggle('hide-boxes',!$('showBoxes').checked);$('zoom').oninput=setZoom;
 try{const response=await fetch(url('all/index.json'),{cache:'no-cache'});if(!response.ok)throw Error('图片清单读取失败');index=await response.json();if(index.images!==index.files.length)throw Error('清单数量不完整');$('summary').textContent=`筛选后 ${index.images} 组 · ${index.boxes.toLocaleString()} 框 · 图片、坐标与 GT 逐框对应`;renderCards();const wanted=new URLSearchParams(location.search).get('image');await openPage(index.files.some(r=>r.name===wanted)?wanted:index.files[0].name);}catch(e){$('summary').textContent=e.message;}
+
+installRemoval({getName:()=>currentName});
