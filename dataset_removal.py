@@ -17,9 +17,14 @@ def plan(base,name):
     if p.is_file() and p.stem==name:
      if p.is_symlink() or not p.resolve().is_relative_to(root.resolve()):raise ValueError('遇到链接文件，需人工核对后剔除')
      removed.append(p)
- for key in ['annotation','source_image']:
-  src=Path(row[key])
-  if src not in removed:raise ValueError('源文件不在安全剔除范围内：'+str(src))
+ # Source-image provenance may point to an external, shared input collection.
+ # Only remove corpus-owned copies; external provenance is never a deletion target.
+ annotation=Path(row['annotation'])
+ if annotation not in removed:raise ValueError('源标注不在安全剔除范围内：'+str(annotation))
+ source=Path(row['source_image']);preserved=[]
+ if source not in removed:
+  if source.resolve().is_relative_to(B.resolve()):raise ValueError('数据集内源图片缺失或路径异常：'+str(source))
+  preserved.append(str(source))
  for folder in ['intact-img','coordinate','gt-label']:
   if not any(p.parent==B/folder for p in removed):raise ValueError('图片、坐标或 GT 不完整，请先核对')
  changes={}
@@ -69,7 +74,7 @@ def plan(base,name):
   if new!=s:stage(p,new.encode())
  oldbytes={p:p.read_bytes() for p in list(changes)+removed}
  token=sha(enc([(str(p),sha(b)) for p,b in sorted(oldbytes.items(),key=lambda x:str(x[0]))]))
- summary={'name':name,'boxes':row['box_count'],'remainingImages':count,'remainingBoxes':boxes,'fileCount':len(removed),'backupPath':str(R/'备份'),'token':token,'files':[str(p) for p in removed]}
+ summary={'name':name,'boxes':row['box_count'],'remainingImages':count,'remainingBoxes':boxes,'fileCount':len(removed),'backupPath':str(R/'备份'),'token':token,'files':[str(p) for p in removed],'preservedSources':preserved}
  return summary,changes,removed,oldbytes
 
 def preview(base,name):return plan(base,name)[0]

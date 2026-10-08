@@ -20,6 +20,12 @@ class RemovalTests(unittest.TestCase):
   for root in [self.base,self.b]:self.assertFalse(any(p.stem=='1-50' for p in root.rglob('*') if p.is_file()))
   self.assertTrue((self.b/'intact-img/1-52.png').exists());self.assertEqual(len(m.load(self.w/'data/manifest.json')['files']),1)
   with self.assertRaises(ValueError):m.preview(self.base,'1-50')
+ def test_external_source_image_is_preserved(self):
+  source=self.root/'external/1-50.png';self.write(source,b'external-original')
+  p=self.b/'质量检查/逐文件检查明细.json';rows=m.load(p);rows[0]['source_image']=str(source);self.write(p,m.enc(rows))
+  pr=m.preview(self.base,'1-50');self.assertEqual(pr['preservedSources'],[str(source)])
+  m.apply(self.base,dict(name='1-50',confirmName='1-50',token=pr['token']))
+  self.assertEqual(source.read_bytes(),b'external-original');self.assertFalse((self.b/'intact-img/1-50.png').exists())
  def test_stale_and_traversal(self):
   with self.assertRaises(ValueError):m.preview(self.base,'../1-50')
   pr=m.preview(self.base,'1-50');p=self.b/'coordinate/1-50.txt';p.write_text('new edit')

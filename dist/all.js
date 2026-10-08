@@ -1,4 +1,4 @@
-import {installRemoval} from './dataset-removal.js?v=20261008-1';
+import {installRemoval} from './dataset-removal.js?v=20261008-2';
 const $=id=>document.getElementById(id),root=new URL('.',location.href),ns='http://www.w3.org/2000/svg';
 let index,record,selected=-1,currentName='',loadVersion=0;
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
