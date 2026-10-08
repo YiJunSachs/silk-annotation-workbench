@@ -3319,7 +3319,9 @@
       "slope": 0.0,
       "annotator": "待确认",
       "group": "帛书标注",
-      "assessment": "需结合版式复核"
+      "assessment": "已修复：末尾补录的「右」「介」插回原第53框之后。下方保留修复前的跨区证据。",
+      "fixed": true,
+      "remainingEvents": []
     },
     {
       "name": "1-125",
@@ -7732,8 +7734,9 @@
     "1-34",
     "1-101",
     "1-117",
-    "1-150"
+    "1-150",
+    "1-119"
   ],
-  "pendingCount": 45,
+  "pendingCount": 44,
   "checkedAt": "2026-10-08"
 }
